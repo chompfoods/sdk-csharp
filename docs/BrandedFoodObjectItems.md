@@ -1,0 +1,36 @@
+# IO.Swagger.Model.BrandedFoodObjectItems
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Barcode** | **string** | EAN/UPC barcode | [optional] 
+**Name** | **string** | Item name as provided by brand owner or as shown on packaging | [optional] 
+**Brand** | **string** | The brand name that owns this item | [optional] 
+**Ingredients** | **string** | Ingredients in order of highest value to least | [optional] 
+**Package** | [**BrandedFoodObjectPackage**](BrandedFoodObjectPackage.md) |  | [optional] 
+**Serving** | [**BrandedFoodObjectServing**](BrandedFoodObjectServing.md) |  | [optional] 
+**Categories** | **List&lt;string&gt;** |  | [optional] 
+**Nutrients** | [**BrandedFoodObjectNutrients**](BrandedFoodObjectNutrients.md) |  | [optional] 
+**CalorieConversionFactor** | [**BrandedFoodObjectCalorieConversionFactor**](BrandedFoodObjectCalorieConversionFactor.md) |  | [optional] 
+**ProteinConversionFactor** | [**decimal?**](BigDecimal.md) | The multiplication factor used to calculate protein from nitrogen | [optional] 
+**DietLabels** | [**BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
+**DietFlags** | [**List&lt;BrandedFoodObjectDietFlags&gt;**](BrandedFoodObjectDietFlags.md) | An array of ingredient objects that were flagged while grading this item for compatibility with each diet | [optional] 
+**PackagingPhotos** | [**BrandedFoodObjectPackagingPhotos**](BrandedFoodObjectPackagingPhotos.md) |  | [optional] 
+**Components** | [**List&lt;BrandedFoodObjectComponents&gt;**](BrandedFoodObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) | [optional] 
+**Portions** | [**List&lt;BrandedFoodObjectPortions&gt;**](BrandedFoodObjectPortions.md) | An array of objects containing information on discrete amounts of a food found in this item | [optional] 
+**Allergens** | **List&lt;string&gt;** | An array of ingredients in this item that may cause allergic reactions in people | [optional] 
+**BrandList** | **List&lt;string&gt;** | An array of brands we have associated with this item. Some items are sold by more than 1 brand. | [optional] 
+**Countries** | **List&lt;string&gt;** | An array of countries where this item is sold | [optional] 
+**CountryDetails** | [**BrandedFoodObjectCountryDetails**](BrandedFoodObjectCountryDetails.md) |  | [optional] 
+**PalmOilIngredients** | **List&lt;string&gt;** | An array of ingredients made from palm oil | [optional] 
+**IngredientList** | **List&lt;string&gt;** | An array of this item&#x27;s ingredients | [optional] 
+**HasEnglishIngredients** | **bool?** | A boolean indicating if we have English ingredients for this item | [optional] 
+**Minerals** | **List&lt;string&gt;** | An array of minerals that this item contains | [optional] 
+**Traces** | **List&lt;string&gt;** | An array of trace ingredients that may be found in this item | [optional] 
+**CommonName** | **string** | Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
+**Description** | **string** | A description of this item | [optional] 
+**Keywords** | **List&lt;string&gt;** | An array of keywords that can be used to describe this item | [optional] 
+**Footnote** | **string** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall. | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
