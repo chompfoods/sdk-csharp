@@ -258,6 +258,14 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Traces'
         }
         /// <summary>
+        /// Test the property 'Vitamins'
+        /// </summary>
+        [Test]
+        public void VitaminsTest()
+        {
+            // TODO unit test for the property 'Vitamins'
+        }
+        /// <summary>
         /// Test the property 'CommonName'
         /// </summary>
         [Test]
