@@ -56,7 +56,7 @@ namespace IO.Swagger.Model
         /// <param name="hasEnglishIngredients">A boolean indicating if we have English ingredients for this item.</param>
         /// <param name="minerals">An array of minerals that this item contains.</param>
         /// <param name="traces">An array of trace ingredients that may be found in this item.</param>
-        /// <param name="vitamins">An array of vitamins that can be found in this item.</param>
+        /// <param name="vitamins">An array of vitamins that are found in this item.</param>
         /// <param name="commonName">Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
@@ -255,9 +255,9 @@ namespace IO.Swagger.Model
         public List<string> Traces { get; set; }
 
         /// <summary>
-        /// An array of vitamins that can be found in this item
+        /// An array of vitamins that are found in this item
         /// </summary>
-        /// <value>An array of vitamins that can be found in this item</value>
+        /// <value>An array of vitamins that are found in this item</value>
         [DataMember(Name="vitamins", EmitDefaultValue=false)]
         public List<string> Vitamins { get; set; }
 
