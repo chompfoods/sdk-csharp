@@ -149,7 +149,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>IngredientObject</returns>
-        IngredientObject IngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null);
+        IngredientObject FoodIngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null);
 
         /// <summary>
         /// Get raw/generic food ingredient item(s)
@@ -163,7 +163,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>ApiResponse of IngredientObject</returns>
-        ApiResponse<IngredientObject> IngredientSearchPhpGetWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null);
+        ApiResponse<IngredientObject> FoodIngredientSearchPhpGetWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -292,7 +292,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>Task of IngredientObject</returns>
-        System.Threading.Tasks.Task<IngredientObject> IngredientSearchPhpGetAsync (int? find, bool? list, bool? raw = null, int? limit = null);
+        System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (int? find, bool? list, bool? raw = null, int? limit = null);
 
         /// <summary>
         /// Get raw/generic food ingredient item(s)
@@ -306,7 +306,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>Task of ApiResponse (IngredientObject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IngredientObject>> IngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -1075,9 +1075,9 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>IngredientObject</returns>
-        public IngredientObject IngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null)
+        public IngredientObject FoodIngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null)
         {
-             ApiResponse<IngredientObject> localVarResponse = IngredientSearchPhpGetWithHttpInfo(find, list, raw, limit);
+             ApiResponse<IngredientObject> localVarResponse = FoodIngredientSearchPhpGetWithHttpInfo(find, list, raw, limit);
              return localVarResponse.Data;
         }
 
@@ -1090,16 +1090,16 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>ApiResponse of IngredientObject</returns>
-        public ApiResponse< IngredientObject > IngredientSearchPhpGetWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null)
+        public ApiResponse< IngredientObject > FoodIngredientSearchPhpGetWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null)
         {
             // verify the required parameter 'find' is set
             if (find == null)
-                throw new ApiException(400, "Missing required parameter 'find' when calling DefaultApi->IngredientSearchPhpGet");
+                throw new ApiException(400, "Missing required parameter 'find' when calling DefaultApi->FoodIngredientSearchPhpGet");
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling DefaultApi->IngredientSearchPhpGet");
+                throw new ApiException(400, "Missing required parameter 'list' when calling DefaultApi->FoodIngredientSearchPhpGet");
 
-            var localVarPath = "/ingredient/search.php";
+            var localVarPath = "/food/ingredient/search.php";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1139,7 +1139,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IngredientSearchPhpGet", localVarResponse);
+                Exception exception = ExceptionFactory("FoodIngredientSearchPhpGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1157,9 +1157,9 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>Task of IngredientObject</returns>
-        public async System.Threading.Tasks.Task<IngredientObject> IngredientSearchPhpGetAsync (int? find, bool? list, bool? raw = null, int? limit = null)
+        public async System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (int? find, bool? list, bool? raw = null, int? limit = null)
         {
-             ApiResponse<IngredientObject> localVarResponse = await IngredientSearchPhpGetAsyncWithHttpInfo(find, list, raw, limit);
+             ApiResponse<IngredientObject> localVarResponse = await FoodIngredientSearchPhpGetAsyncWithHttpInfo(find, list, raw, limit);
              return localVarResponse.Data;
 
         }
@@ -1173,16 +1173,16 @@ namespace IO.Swagger.Api
         /// <param name="raw">Specify if you only want data for raw ingredients.  __Example:__ true _(defaults to true)_  (optional)</param>
         /// <param name="limit">Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \&quot;1\&quot; will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_  (optional)</param>
         /// <returns>Task of ApiResponse (IngredientObject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IngredientObject>> IngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? list, bool? raw = null, int? limit = null)
         {
             // verify the required parameter 'find' is set
             if (find == null)
-                throw new ApiException(400, "Missing required parameter 'find' when calling DefaultApi->IngredientSearchPhpGet");
+                throw new ApiException(400, "Missing required parameter 'find' when calling DefaultApi->FoodIngredientSearchPhpGet");
             // verify the required parameter 'list' is set
             if (list == null)
-                throw new ApiException(400, "Missing required parameter 'list' when calling DefaultApi->IngredientSearchPhpGet");
+                throw new ApiException(400, "Missing required parameter 'list' when calling DefaultApi->FoodIngredientSearchPhpGet");
 
-            var localVarPath = "/ingredient/search.php";
+            var localVarPath = "/food/ingredient/search.php";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1222,7 +1222,7 @@ namespace IO.Swagger.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("IngredientSearchPhpGet", localVarResponse);
+                Exception exception = ExceptionFactory("FoodIngredientSearchPhpGet", localVarResponse);
                 if (exception != null) throw exception;
             }
 

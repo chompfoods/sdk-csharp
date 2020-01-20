@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**FoodBrandedIdPhpGet**](DefaultApi.md#foodbrandedidphpget) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 [**FoodBrandedNamePhpGet**](DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 [**FoodBrandedSearchPhpGet**](DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-[**IngredientSearchPhpGet**](DefaultApi.md#ingredientsearchphpget) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+[**FoodIngredientSearchPhpGet**](DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 <a name="foodbrandedbarcodephpget"></a>
 # **FoodBrandedBarcodePhpGet**
@@ -300,9 +300,9 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-<a name="ingredientsearchphpget"></a>
-# **IngredientSearchPhpGet**
-> IngredientObject IngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null)
+<a name="foodingredientsearchphpget"></a>
+# **FoodIngredientSearchPhpGet**
+> IngredientObject FoodIngredientSearchPhpGet (int? find, bool? list, bool? raw = null, int? limit = null)
 
 Get raw/generic food ingredient item(s)
 
@@ -318,7 +318,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class IngredientSearchPhpGetExample
+    public class FoodIngredientSearchPhpGetExample
     {
         public void main()
         {
@@ -336,12 +336,12 @@ namespace Example
             try
             {
                 // Get raw/generic food ingredient item(s)
-                IngredientObject result = apiInstance.IngredientSearchPhpGet(find, list, raw, limit);
+                IngredientObject result = apiInstance.FoodIngredientSearchPhpGet(find, list, raw, limit);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling DefaultApi.IngredientSearchPhpGet: " + e.Message );
+                Debug.Print("Exception when calling DefaultApi.FoodIngredientSearchPhpGet: " + e.Message );
             }
         }
     }

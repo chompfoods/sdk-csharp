@@ -122,17 +122,17 @@ namespace IO.Swagger.Test
             //Assert.IsInstanceOf<BrandedFoodObject> (response, "response is BrandedFoodObject");
         }
         /// <summary>
-        /// Test IngredientSearchPhpGet
+        /// Test FoodIngredientSearchPhpGet
         /// </summary>
         [Test]
-        public void IngredientSearchPhpGetTest()
+        public void FoodIngredientSearchPhpGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? find = null;
             //bool? list = null;
             //bool? raw = null;
             //int? limit = null;
-            //var response = instance.IngredientSearchPhpGet(find, list, raw, limit);
+            //var response = instance.FoodIngredientSearchPhpGet(find, list, raw, limit);
             //Assert.IsInstanceOf<IngredientObject> (response, "response is IngredientObject");
         }
     }
