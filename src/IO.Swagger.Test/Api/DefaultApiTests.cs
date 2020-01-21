@@ -94,7 +94,8 @@ namespace IO.Swagger.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string name = null;
             //int? limit = null;
-            //var response = instance.FoodBrandedNamePhpGet(name, limit);
+            //int? page = null;
+            //var response = instance.FoodBrandedNamePhpGet(name, limit, page);
             //Assert.IsInstanceOf<BrandedFoodObject> (response, "response is BrandedFoodObject");
         }
         /// <summary>
