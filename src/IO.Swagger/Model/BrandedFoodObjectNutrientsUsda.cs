@@ -39,11 +39,11 @@ namespace IO.Swagger.Model
         /// <param name="min">Minimum nutrient value.</param>
         /// <param name="max">Maximum nutrient value.</param>
         /// <param name="median">Median nutrient value.</param>
+        /// <param name="rank">Nutrient rank.</param>
         /// <param name="dataPoints">Number of observations on which the value is based.</param>
         /// <param name="footnote">Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected..</param>
-        /// <param name="source">Description of the nutrient source.</param>
-        /// <param name="description">Description of how the food nutrient value was obtained.</param>
-        public BrandedFoodObjectNutrientsUsda(int? id = default(int?), string name = default(string), decimal? per100g = default(decimal?), string measurementUnit = default(string), decimal? min = default(decimal?), decimal? max = default(decimal?), decimal? median = default(decimal?), int? dataPoints = default(int?), string footnote = default(string), string source = default(string), string description = default(string))
+        /// <param name="description">Description of the nutrient source.</param>
+        public BrandedFoodObjectNutrientsUsda(int? id = default(int?), string name = default(string), decimal? per100g = default(decimal?), string measurementUnit = default(string), decimal? min = default(decimal?), decimal? max = default(decimal?), decimal? median = default(decimal?), int? rank = default(int?), int? dataPoints = default(int?), string footnote = default(string), string description = default(string))
         {
             this.Id = id;
             this.Name = name;
@@ -52,9 +52,9 @@ namespace IO.Swagger.Model
             this.Min = min;
             this.Max = max;
             this.Median = median;
+            this.Rank = rank;
             this.DataPoints = dataPoints;
             this.Footnote = footnote;
-            this.Source = source;
             this.Description = description;
         }
         
@@ -108,6 +108,13 @@ namespace IO.Swagger.Model
         public decimal? Median { get; set; }
 
         /// <summary>
+        /// Nutrient rank
+        /// </summary>
+        /// <value>Nutrient rank</value>
+        [DataMember(Name="rank", EmitDefaultValue=false)]
+        public int? Rank { get; set; }
+
+        /// <summary>
         /// Number of observations on which the value is based
         /// </summary>
         /// <value>Number of observations on which the value is based</value>
@@ -125,13 +132,6 @@ namespace IO.Swagger.Model
         /// Description of the nutrient source
         /// </summary>
         /// <value>Description of the nutrient source</value>
-        [DataMember(Name="source", EmitDefaultValue=false)]
-        public string Source { get; set; }
-
-        /// <summary>
-        /// Description of how the food nutrient value was obtained
-        /// </summary>
-        /// <value>Description of how the food nutrient value was obtained</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 
@@ -150,9 +150,9 @@ namespace IO.Swagger.Model
             sb.Append("  Min: ").Append(Min).Append("\n");
             sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("  Median: ").Append(Median).Append("\n");
+            sb.Append("  Rank: ").Append(Rank).Append("\n");
             sb.Append("  DataPoints: ").Append(DataPoints).Append("\n");
             sb.Append("  Footnote: ").Append(Footnote).Append("\n");
-            sb.Append("  Source: ").Append(Source).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -224,6 +224,11 @@ namespace IO.Swagger.Model
                     this.Median.Equals(input.Median))
                 ) && 
                 (
+                    this.Rank == input.Rank ||
+                    (this.Rank != null &&
+                    this.Rank.Equals(input.Rank))
+                ) && 
+                (
                     this.DataPoints == input.DataPoints ||
                     (this.DataPoints != null &&
                     this.DataPoints.Equals(input.DataPoints))
@@ -232,11 +237,6 @@ namespace IO.Swagger.Model
                     this.Footnote == input.Footnote ||
                     (this.Footnote != null &&
                     this.Footnote.Equals(input.Footnote))
-                ) && 
-                (
-                    this.Source == input.Source ||
-                    (this.Source != null &&
-                    this.Source.Equals(input.Source))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -268,12 +268,12 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Max.GetHashCode();
                 if (this.Median != null)
                     hashCode = hashCode * 59 + this.Median.GetHashCode();
+                if (this.Rank != null)
+                    hashCode = hashCode * 59 + this.Rank.GetHashCode();
                 if (this.DataPoints != null)
                     hashCode = hashCode * 59 + this.DataPoints.GetHashCode();
                 if (this.Footnote != null)
                     hashCode = hashCode * 59 + this.Footnote.GetHashCode();
-                if (this.Source != null)
-                    hashCode = hashCode * 59 + this.Source.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 return hashCode;

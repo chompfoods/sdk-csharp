@@ -122,6 +122,14 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Median'
         }
         /// <summary>
+        /// Test the property 'Rank'
+        /// </summary>
+        [Test]
+        public void RankTest()
+        {
+            // TODO unit test for the property 'Rank'
+        }
+        /// <summary>
         /// Test the property 'DataPoints'
         /// </summary>
         [Test]
@@ -136,14 +144,6 @@ namespace IO.Swagger.Test
         public void FootnoteTest()
         {
             // TODO unit test for the property 'Footnote'
-        }
-        /// <summary>
-        /// Test the property 'Source'
-        /// </summary>
-        [Test]
-        public void SourceTest()
-        {
-            // TODO unit test for the property 'Source'
         }
         /// <summary>
         /// Test the property 'Description'

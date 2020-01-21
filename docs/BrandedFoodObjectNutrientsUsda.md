@@ -10,10 +10,10 @@ Name | Type | Description | Notes
 **Min** | [**decimal?**](BigDecimal.md) | Minimum nutrient value | [optional] 
 **Max** | [**decimal?**](BigDecimal.md) | Maximum nutrient value | [optional] 
 **Median** | [**decimal?**](BigDecimal.md) | Median nutrient value | [optional] 
+**Rank** | **int?** | Nutrient rank | [optional] 
 **DataPoints** | **int?** | Number of observations on which the value is based | [optional] 
 **Footnote** | **string** | Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected. | [optional] 
-**Source** | **string** | Description of the nutrient source | [optional] 
-**Description** | **string** | Description of how the food nutrient value was obtained | [optional] 
+**Description** | **string** | Description of the nutrient source | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
