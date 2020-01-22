@@ -24,33 +24,26 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// An object containing serving information for this item
+    /// Serving information from as seen on ChompThis.com
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectServing :  IEquatable<BrandedFoodObjectServing>, IValidatableObject
+        public partial class BrandedFoodObjectServingChomp :  IEquatable<BrandedFoodObjectServingChomp>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectServing" /> class.
+        /// Initializes a new instance of the <see cref="BrandedFoodObjectServingChomp" /> class.
         /// </summary>
-        /// <param name="chomp">chomp.</param>
-        /// <param name="usda">usda.</param>
-        public BrandedFoodObjectServing(BrandedFoodObjectServingChomp chomp = default(BrandedFoodObjectServingChomp), BrandedFoodObjectServingUsda usda = default(BrandedFoodObjectServingUsda))
+        /// <param name="size">Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp).</param>
+        public BrandedFoodObjectServingChomp(string size = default(string))
         {
-            this.Chomp = chomp;
-            this.Usda = usda;
+            this.Size = size;
         }
         
         /// <summary>
-        /// Gets or Sets Chomp
+        /// Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
         /// </summary>
-        [DataMember(Name="chomp", EmitDefaultValue=false)]
-        public BrandedFoodObjectServingChomp Chomp { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Usda
-        /// </summary>
-        [DataMember(Name="usda", EmitDefaultValue=false)]
-        public BrandedFoodObjectServingUsda Usda { get; set; }
+        /// <value>Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)</value>
+        [DataMember(Name="size", EmitDefaultValue=false)]
+        public string Size { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -59,9 +52,8 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectServing {\n");
-            sb.Append("  Chomp: ").Append(Chomp).Append("\n");
-            sb.Append("  Usda: ").Append(Usda).Append("\n");
+            sb.Append("class BrandedFoodObjectServingChomp {\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,29 +74,24 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectServing);
+            return this.Equals(input as BrandedFoodObjectServingChomp);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectServing instances are equal
+        /// Returns true if BrandedFoodObjectServingChomp instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectServing to be compared</param>
+        /// <param name="input">Instance of BrandedFoodObjectServingChomp to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectServing input)
+        public bool Equals(BrandedFoodObjectServingChomp input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Chomp == input.Chomp ||
-                    (this.Chomp != null &&
-                    this.Chomp.Equals(input.Chomp))
-                ) && 
-                (
-                    this.Usda == input.Usda ||
-                    (this.Usda != null &&
-                    this.Usda.Equals(input.Usda))
+                    this.Size == input.Size ||
+                    (this.Size != null &&
+                    this.Size.Equals(input.Size))
                 );
         }
 
@@ -117,10 +104,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Chomp != null)
-                    hashCode = hashCode * 59 + this.Chomp.GetHashCode();
-                if (this.Usda != null)
-                    hashCode = hashCode * 59 + this.Usda.GetHashCode();
+                if (this.Size != null)
+                    hashCode = hashCode * 59 + this.Size.GetHashCode();
                 return hashCode;
             }
         }

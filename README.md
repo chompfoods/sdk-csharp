@@ -129,6 +129,8 @@ Class | Method | HTTP request | Description
  - [Model.BrandedFoodObjectPackagingPhotosNutrition](docs/BrandedFoodObjectPackagingPhotosNutrition.md)
  - [Model.BrandedFoodObjectPortions](docs/BrandedFoodObjectPortions.md)
  - [Model.BrandedFoodObjectServing](docs/BrandedFoodObjectServing.md)
+ - [Model.BrandedFoodObjectServingChomp](docs/BrandedFoodObjectServingChomp.md)
+ - [Model.BrandedFoodObjectServingUsda](docs/BrandedFoodObjectServingUsda.md)
  - [Model.IngredientObject](docs/IngredientObject.md)
  - [Model.IngredientObjectItems](docs/IngredientObjectItems.md)
  - [Model.IngredientObjectNutrients](docs/IngredientObjectNutrients.md)

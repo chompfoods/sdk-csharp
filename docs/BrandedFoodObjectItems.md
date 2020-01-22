@@ -28,7 +28,7 @@ Name | Type | Description | Notes
 **Minerals** | **List&lt;string&gt;** | An array of minerals that this item contains | [optional] 
 **Traces** | **List&lt;string&gt;** | An array of trace ingredients that may be found in this item | [optional] 
 **Vitamins** | **List&lt;string&gt;** | An array of vitamins that are found in this item | [optional] 
-**CommonName** | **string** | Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
+**CommonNames** | **List&lt;string&gt;** | An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; a common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
 **Description** | **string** | A description of this item | [optional] 
 **Keywords** | **List&lt;string&gt;** | An array of keywords that can be used to describe this item | [optional] 
 **Footnote** | **string** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall. | [optional] 

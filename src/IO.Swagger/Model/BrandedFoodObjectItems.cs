@@ -57,11 +57,11 @@ namespace IO.Swagger.Model
         /// <param name="minerals">An array of minerals that this item contains.</param>
         /// <param name="traces">An array of trace ingredients that may be found in this item.</param>
         /// <param name="vitamins">An array of vitamins that are found in this item.</param>
-        /// <param name="commonName">Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
+        /// <param name="commonNames">An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; a common name may be \&quot;Chicken enchilada\&quot;).</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string commonName = default(string), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), List<string> commonNames = default(List<string>), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -88,7 +88,7 @@ namespace IO.Swagger.Model
             this.Minerals = minerals;
             this.Traces = traces;
             this.Vitamins = vitamins;
-            this.CommonName = commonName;
+            this.CommonNames = commonNames;
             this.Description = description;
             this.Keywords = keywords;
             this.Footnote = footnote;
@@ -261,11 +261,11 @@ namespace IO.Swagger.Model
         public List<string> Vitamins { get; set; }
 
         /// <summary>
-        /// Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
+        /// An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; a common name may be \&quot;Chicken enchilada\&quot;)
         /// </summary>
-        /// <value>Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)</value>
-        [DataMember(Name="common_name", EmitDefaultValue=false)]
-        public string CommonName { get; set; }
+        /// <value>An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; a common name may be \&quot;Chicken enchilada\&quot;)</value>
+        [DataMember(Name="common_names", EmitDefaultValue=false)]
+        public List<string> CommonNames { get; set; }
 
         /// <summary>
         /// A description of this item
@@ -321,7 +321,7 @@ namespace IO.Swagger.Model
             sb.Append("  Minerals: ").Append(Minerals).Append("\n");
             sb.Append("  Traces: ").Append(Traces).Append("\n");
             sb.Append("  Vitamins: ").Append(Vitamins).Append("\n");
-            sb.Append("  CommonName: ").Append(CommonName).Append("\n");
+            sb.Append("  CommonNames: ").Append(CommonNames).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
             sb.Append("  Footnote: ").Append(Footnote).Append("\n");
@@ -497,9 +497,10 @@ namespace IO.Swagger.Model
                     this.Vitamins.SequenceEqual(input.Vitamins)
                 ) && 
                 (
-                    this.CommonName == input.CommonName ||
-                    (this.CommonName != null &&
-                    this.CommonName.Equals(input.CommonName))
+                    this.CommonNames == input.CommonNames ||
+                    this.CommonNames != null &&
+                    input.CommonNames != null &&
+                    this.CommonNames.SequenceEqual(input.CommonNames)
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -578,8 +579,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Traces.GetHashCode();
                 if (this.Vitamins != null)
                     hashCode = hashCode * 59 + this.Vitamins.GetHashCode();
-                if (this.CommonName != null)
-                    hashCode = hashCode * 59 + this.CommonName.GetHashCode();
+                if (this.CommonNames != null)
+                    hashCode = hashCode * 59 + this.CommonNames.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Keywords != null)
