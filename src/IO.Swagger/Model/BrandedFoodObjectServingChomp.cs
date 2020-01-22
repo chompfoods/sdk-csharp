@@ -24,7 +24,7 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Serving information from as seen on ChompThis.com
+    /// Serving information from Chomp&#x27;s internal database
     /// </summary>
     [DataContract]
         public partial class BrandedFoodObjectServingChomp :  IEquatable<BrandedFoodObjectServingChomp>, IValidatableObject

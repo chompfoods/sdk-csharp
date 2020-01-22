@@ -32,7 +32,7 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandedFoodObjectIngredients" /> class.
         /// </summary>
-        /// <param name="chomp">This item&#x27;s ingredients as seen on ChompThis.com.</param>
+        /// <param name="chomp">Ingredients for this item from Chomp&#x27;s internal database.</param>
         /// <param name="usda">This branded food item&#x27;s ingredients according to the USDA.</param>
         public BrandedFoodObjectIngredients(string chomp = default(string), string usda = default(string))
         {
@@ -41,9 +41,9 @@ namespace IO.Swagger.Model
         }
         
         /// <summary>
-        /// This item&#x27;s ingredients as seen on ChompThis.com
+        /// Ingredients for this item from Chomp&#x27;s internal database
         /// </summary>
-        /// <value>This item&#x27;s ingredients as seen on ChompThis.com</value>
+        /// <value>Ingredients for this item from Chomp&#x27;s internal database</value>
         [DataMember(Name="chomp", EmitDefaultValue=false)]
         public string Chomp { get; set; }
 
