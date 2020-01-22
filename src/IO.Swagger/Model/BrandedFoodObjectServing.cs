@@ -32,31 +32,22 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandedFoodObjectServing" /> class.
         /// </summary>
-        /// <param name="size">Serving size.</param>
-        /// <param name="measurementUnit">Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp).</param>
+        /// <param name="size">Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp).</param>
         /// <param name="sizeFulltext">Serving size description.</param>
         /// <param name="total">Total servings.</param>
-        public BrandedFoodObjectServing(int? size = default(int?), string measurementUnit = default(string), string sizeFulltext = default(string), int? total = default(int?))
+        public BrandedFoodObjectServing(string size = default(string), string sizeFulltext = default(string), int? total = default(int?))
         {
             this.Size = size;
-            this.MeasurementUnit = measurementUnit;
             this.SizeFulltext = sizeFulltext;
             this.Total = total;
         }
         
         /// <summary>
-        /// Serving size
+        /// Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
         /// </summary>
-        /// <value>Serving size</value>
+        /// <value>Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
-        public int? Size { get; set; }
-
-        /// <summary>
-        /// Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
-        /// </summary>
-        /// <value>Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)</value>
-        [DataMember(Name="measurement_unit", EmitDefaultValue=false)]
-        public string MeasurementUnit { get; set; }
+        public string Size { get; set; }
 
         /// <summary>
         /// Serving size description
@@ -81,7 +72,6 @@ namespace IO.Swagger.Model
             var sb = new StringBuilder();
             sb.Append("class BrandedFoodObjectServing {\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  MeasurementUnit: ").Append(MeasurementUnit).Append("\n");
             sb.Append("  SizeFulltext: ").Append(SizeFulltext).Append("\n");
             sb.Append("  Total: ").Append(Total).Append("\n");
             sb.Append("}\n");
@@ -124,11 +114,6 @@ namespace IO.Swagger.Model
                     this.Size.Equals(input.Size))
                 ) && 
                 (
-                    this.MeasurementUnit == input.MeasurementUnit ||
-                    (this.MeasurementUnit != null &&
-                    this.MeasurementUnit.Equals(input.MeasurementUnit))
-                ) && 
-                (
                     this.SizeFulltext == input.SizeFulltext ||
                     (this.SizeFulltext != null &&
                     this.SizeFulltext.Equals(input.SizeFulltext))
@@ -151,8 +136,6 @@ namespace IO.Swagger.Model
                 int hashCode = 41;
                 if (this.Size != null)
                     hashCode = hashCode * 59 + this.Size.GetHashCode();
-                if (this.MeasurementUnit != null)
-                    hashCode = hashCode * 59 + this.MeasurementUnit.GetHashCode();
                 if (this.SizeFulltext != null)
                     hashCode = hashCode * 59 + this.SizeFulltext.GetHashCode();
                 if (this.Total != null)

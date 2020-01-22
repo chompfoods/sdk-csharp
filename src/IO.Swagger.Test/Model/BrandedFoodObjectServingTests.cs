@@ -74,14 +74,6 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Size'
         }
         /// <summary>
-        /// Test the property 'MeasurementUnit'
-        /// </summary>
-        [Test]
-        public void MeasurementUnitTest()
-        {
-            // TODO unit test for the property 'MeasurementUnit'
-        }
-        /// <summary>
         /// Test the property 'SizeFulltext'
         /// </summary>
         [Test]
