@@ -35,7 +35,7 @@ namespace IO.Swagger.Model
         /// <param name="barcode">EAN/UPC barcode.</param>
         /// <param name="name">Item name as provided by brand owner or as shown on packaging.</param>
         /// <param name="brand">The brand name that owns this item.</param>
-        /// <param name="ingredients">Ingredients in order of highest value to least.</param>
+        /// <param name="ingredients">ingredients.</param>
         /// <param name="package">package.</param>
         /// <param name="serving">serving.</param>
         /// <param name="categories">categories.</param>
@@ -61,7 +61,7 @@ namespace IO.Swagger.Model
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), string ingredients = default(string), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string commonName = default(string), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string commonName = default(string), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -116,11 +116,10 @@ namespace IO.Swagger.Model
         public string Brand { get; set; }
 
         /// <summary>
-        /// Ingredients in order of highest value to least
+        /// Gets or Sets Ingredients
         /// </summary>
-        /// <value>Ingredients in order of highest value to least</value>
         [DataMember(Name="ingredients", EmitDefaultValue=false)]
-        public string Ingredients { get; set; }
+        public BrandedFoodObjectIngredients Ingredients { get; set; }
 
         /// <summary>
         /// Gets or Sets Package

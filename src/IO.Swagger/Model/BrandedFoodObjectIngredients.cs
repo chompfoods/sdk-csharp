@@ -24,35 +24,35 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// An object containing basic packaging information about this item
+    /// An object containing this item&#x27;s ingredients in order of highest value to least
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectPackage :  IEquatable<BrandedFoodObjectPackage>, IValidatableObject
+        public partial class BrandedFoodObjectIngredients :  IEquatable<BrandedFoodObjectIngredients>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectPackage" /> class.
+        /// Initializes a new instance of the <see cref="BrandedFoodObjectIngredients" /> class.
         /// </summary>
-        /// <param name="quantity">Package quantity.</param>
-        /// <param name="size">Package size.</param>
-        public BrandedFoodObjectPackage(int? quantity = default(int?), string size = default(string))
+        /// <param name="chomp">This item&#x27;s ingredients as seen on ChompThis.com.</param>
+        /// <param name="usda">This branded food item&#x27;s ingredients according to the USDA.</param>
+        public BrandedFoodObjectIngredients(string chomp = default(string), string usda = default(string))
         {
-            this.Quantity = quantity;
-            this.Size = size;
+            this.Chomp = chomp;
+            this.Usda = usda;
         }
         
         /// <summary>
-        /// Package quantity
+        /// This item&#x27;s ingredients as seen on ChompThis.com
         /// </summary>
-        /// <value>Package quantity</value>
-        [DataMember(Name="quantity", EmitDefaultValue=false)]
-        public int? Quantity { get; set; }
+        /// <value>This item&#x27;s ingredients as seen on ChompThis.com</value>
+        [DataMember(Name="chomp", EmitDefaultValue=false)]
+        public string Chomp { get; set; }
 
         /// <summary>
-        /// Package size
+        /// This branded food item&#x27;s ingredients according to the USDA
         /// </summary>
-        /// <value>Package size</value>
-        [DataMember(Name="size", EmitDefaultValue=false)]
-        public string Size { get; set; }
+        /// <value>This branded food item&#x27;s ingredients according to the USDA</value>
+        [DataMember(Name="usda", EmitDefaultValue=false)]
+        public string Usda { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -61,9 +61,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectPackage {\n");
-            sb.Append("  Quantity: ").Append(Quantity).Append("\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("class BrandedFoodObjectIngredients {\n");
+            sb.Append("  Chomp: ").Append(Chomp).Append("\n");
+            sb.Append("  Usda: ").Append(Usda).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -84,29 +84,29 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectPackage);
+            return this.Equals(input as BrandedFoodObjectIngredients);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectPackage instances are equal
+        /// Returns true if BrandedFoodObjectIngredients instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectPackage to be compared</param>
+        /// <param name="input">Instance of BrandedFoodObjectIngredients to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectPackage input)
+        public bool Equals(BrandedFoodObjectIngredients input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Quantity == input.Quantity ||
-                    (this.Quantity != null &&
-                    this.Quantity.Equals(input.Quantity))
+                    this.Chomp == input.Chomp ||
+                    (this.Chomp != null &&
+                    this.Chomp.Equals(input.Chomp))
                 ) && 
                 (
-                    this.Size == input.Size ||
-                    (this.Size != null &&
-                    this.Size.Equals(input.Size))
+                    this.Usda == input.Usda ||
+                    (this.Usda != null &&
+                    this.Usda.Equals(input.Usda))
                 );
         }
 
@@ -119,10 +119,10 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Quantity != null)
-                    hashCode = hashCode * 59 + this.Quantity.GetHashCode();
-                if (this.Size != null)
-                    hashCode = hashCode * 59 + this.Size.GetHashCode();
+                if (this.Chomp != null)
+                    hashCode = hashCode * 59 + this.Chomp.GetHashCode();
+                if (this.Usda != null)
+                    hashCode = hashCode * 59 + this.Usda.GetHashCode();
                 return hashCode;
             }
         }
