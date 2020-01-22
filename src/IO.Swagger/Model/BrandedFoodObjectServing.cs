@@ -1,7 +1,7 @@
 /* 
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  - -- --  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  - -- --  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | - -- -- -- | - -- -- -- - | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | - -- -- -- | - -- -- -- - | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -32,45 +32,25 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandedFoodObjectServing" /> class.
         /// </summary>
-        /// <param name="size">Serving size.</param>
-        /// <param name="measurementUnit">Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp).</param>
-        /// <param name="sizeFulltext">Serving size description.</param>
-        /// <param name="total">Total servings.</param>
-        public BrandedFoodObjectServing(int? size = default(int?), string measurementUnit = default(string), string sizeFulltext = default(string), int? total = default(int?))
+        /// <param name="chomp">chomp.</param>
+        /// <param name="usda">usda.</param>
+        public BrandedFoodObjectServing(BrandedFoodObjectServingChomp chomp = default(BrandedFoodObjectServingChomp), BrandedFoodObjectServingUsda usda = default(BrandedFoodObjectServingUsda))
         {
-            this.Size = size;
-            this.MeasurementUnit = measurementUnit;
-            this.SizeFulltext = sizeFulltext;
-            this.Total = total;
+            this.Chomp = chomp;
+            this.Usda = usda;
         }
         
         /// <summary>
-        /// Serving size
+        /// Gets or Sets Chomp
         /// </summary>
-        /// <value>Serving size</value>
-        [DataMember(Name="size", EmitDefaultValue=false)]
-        public int? Size { get; set; }
+        [DataMember(Name="chomp", EmitDefaultValue=false)]
+        public BrandedFoodObjectServingChomp Chomp { get; set; }
 
         /// <summary>
-        /// Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
+        /// Gets or Sets Usda
         /// </summary>
-        /// <value>Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)</value>
-        [DataMember(Name="measurement_unit", EmitDefaultValue=false)]
-        public string MeasurementUnit { get; set; }
-
-        /// <summary>
-        /// Serving size description
-        /// </summary>
-        /// <value>Serving size description</value>
-        [DataMember(Name="size_fulltext", EmitDefaultValue=false)]
-        public string SizeFulltext { get; set; }
-
-        /// <summary>
-        /// Total servings
-        /// </summary>
-        /// <value>Total servings</value>
-        [DataMember(Name="total", EmitDefaultValue=false)]
-        public int? Total { get; set; }
+        [DataMember(Name="usda", EmitDefaultValue=false)]
+        public BrandedFoodObjectServingUsda Usda { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -80,10 +60,8 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BrandedFoodObjectServing {\n");
-            sb.Append("  Size: ").Append(Size).Append("\n");
-            sb.Append("  MeasurementUnit: ").Append(MeasurementUnit).Append("\n");
-            sb.Append("  SizeFulltext: ").Append(SizeFulltext).Append("\n");
-            sb.Append("  Total: ").Append(Total).Append("\n");
+            sb.Append("  Chomp: ").Append(Chomp).Append("\n");
+            sb.Append("  Usda: ").Append(Usda).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,24 +97,14 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Size == input.Size ||
-                    (this.Size != null &&
-                    this.Size.Equals(input.Size))
+                    this.Chomp == input.Chomp ||
+                    (this.Chomp != null &&
+                    this.Chomp.Equals(input.Chomp))
                 ) && 
                 (
-                    this.MeasurementUnit == input.MeasurementUnit ||
-                    (this.MeasurementUnit != null &&
-                    this.MeasurementUnit.Equals(input.MeasurementUnit))
-                ) && 
-                (
-                    this.SizeFulltext == input.SizeFulltext ||
-                    (this.SizeFulltext != null &&
-                    this.SizeFulltext.Equals(input.SizeFulltext))
-                ) && 
-                (
-                    this.Total == input.Total ||
-                    (this.Total != null &&
-                    this.Total.Equals(input.Total))
+                    this.Usda == input.Usda ||
+                    (this.Usda != null &&
+                    this.Usda.Equals(input.Usda))
                 );
         }
 
@@ -149,14 +117,10 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Size != null)
-                    hashCode = hashCode * 59 + this.Size.GetHashCode();
-                if (this.MeasurementUnit != null)
-                    hashCode = hashCode * 59 + this.MeasurementUnit.GetHashCode();
-                if (this.SizeFulltext != null)
-                    hashCode = hashCode * 59 + this.SizeFulltext.GetHashCode();
-                if (this.Total != null)
-                    hashCode = hashCode * 59 + this.Total.GetHashCode();
+                if (this.Chomp != null)
+                    hashCode = hashCode * 59 + this.Chomp.GetHashCode();
+                if (this.Usda != null)
+                    hashCode = hashCode * 59 + this.Usda.GetHashCode();
                 return hashCode;
             }
         }

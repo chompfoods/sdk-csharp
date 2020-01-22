@@ -24,44 +24,26 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// An object containing photos of this item&#x27;s nutrition label
+    /// Serving information from Chomp&#x27;s internal database
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectPackagingPhotosNutrition :  IEquatable<BrandedFoodObjectPackagingPhotosNutrition>, IValidatableObject
+        public partial class BrandedFoodObjectServingChomp :  IEquatable<BrandedFoodObjectServingChomp>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectPackagingPhotosNutrition" /> class.
+        /// Initializes a new instance of the <see cref="BrandedFoodObjectServingChomp" /> class.
         /// </summary>
-        /// <param name="small">Small photo of this item&#x27;s nutrition label.</param>
-        /// <param name="thumb">Thumbnail photo of this item&#x27;s nutrition label.</param>
-        /// <param name="display">Full-sized photo of this item&#x27;s nutrition label.</param>
-        public BrandedFoodObjectPackagingPhotosNutrition(string small = default(string), string thumb = default(string), string display = default(string))
+        /// <param name="size">Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp).</param>
+        public BrandedFoodObjectServingChomp(string size = default(string))
         {
-            this.Small = small;
-            this.Thumb = thumb;
-            this.Display = display;
+            this.Size = size;
         }
         
         /// <summary>
-        /// Small photo of this item&#x27;s nutrition label
+        /// Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
         /// </summary>
-        /// <value>Small photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="small", EmitDefaultValue=false)]
-        public string Small { get; set; }
-
-        /// <summary>
-        /// Thumbnail photo of this item&#x27;s nutrition label
-        /// </summary>
-        /// <value>Thumbnail photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="thumb", EmitDefaultValue=false)]
-        public string Thumb { get; set; }
-
-        /// <summary>
-        /// Full-sized photo of this item&#x27;s nutrition label
-        /// </summary>
-        /// <value>Full-sized photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="display", EmitDefaultValue=false)]
-        public string Display { get; set; }
+        /// <value>Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)</value>
+        [DataMember(Name="size", EmitDefaultValue=false)]
+        public string Size { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +52,8 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectPackagingPhotosNutrition {\n");
-            sb.Append("  Small: ").Append(Small).Append("\n");
-            sb.Append("  Thumb: ").Append(Thumb).Append("\n");
-            sb.Append("  Display: ").Append(Display).Append("\n");
+            sb.Append("class BrandedFoodObjectServingChomp {\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,34 +74,24 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectPackagingPhotosNutrition);
+            return this.Equals(input as BrandedFoodObjectServingChomp);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectPackagingPhotosNutrition instances are equal
+        /// Returns true if BrandedFoodObjectServingChomp instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectPackagingPhotosNutrition to be compared</param>
+        /// <param name="input">Instance of BrandedFoodObjectServingChomp to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectPackagingPhotosNutrition input)
+        public bool Equals(BrandedFoodObjectServingChomp input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Small == input.Small ||
-                    (this.Small != null &&
-                    this.Small.Equals(input.Small))
-                ) && 
-                (
-                    this.Thumb == input.Thumb ||
-                    (this.Thumb != null &&
-                    this.Thumb.Equals(input.Thumb))
-                ) && 
-                (
-                    this.Display == input.Display ||
-                    (this.Display != null &&
-                    this.Display.Equals(input.Display))
+                    this.Size == input.Size ||
+                    (this.Size != null &&
+                    this.Size.Equals(input.Size))
                 );
         }
 
@@ -134,12 +104,8 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Small != null)
-                    hashCode = hashCode * 59 + this.Small.GetHashCode();
-                if (this.Thumb != null)
-                    hashCode = hashCode * 59 + this.Thumb.GetHashCode();
-                if (this.Display != null)
-                    hashCode = hashCode * 59 + this.Display.GetHashCode();
+                if (this.Size != null)
+                    hashCode = hashCode * 59 + this.Size.GetHashCode();
                 return hashCode;
             }
         }

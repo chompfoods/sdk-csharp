@@ -24,44 +24,44 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// An object containing photos of this item&#x27;s nutrition label
+    /// Serving information from the USDA
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectPackagingPhotosNutrition :  IEquatable<BrandedFoodObjectPackagingPhotosNutrition>, IValidatableObject
+        public partial class BrandedFoodObjectServingUsda :  IEquatable<BrandedFoodObjectServingUsda>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectPackagingPhotosNutrition" /> class.
+        /// Initializes a new instance of the <see cref="BrandedFoodObjectServingUsda" /> class.
         /// </summary>
-        /// <param name="small">Small photo of this item&#x27;s nutrition label.</param>
-        /// <param name="thumb">Thumbnail photo of this item&#x27;s nutrition label.</param>
-        /// <param name="display">Full-sized photo of this item&#x27;s nutrition label.</param>
-        public BrandedFoodObjectPackagingPhotosNutrition(string small = default(string), string thumb = default(string), string display = default(string))
+        /// <param name="size">Serving size.</param>
+        /// <param name="measurementUnit">Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp).</param>
+        /// <param name="sizeFulltext">Serving size description.</param>
+        public BrandedFoodObjectServingUsda(string size = default(string), string measurementUnit = default(string), string sizeFulltext = default(string))
         {
-            this.Small = small;
-            this.Thumb = thumb;
-            this.Display = display;
+            this.Size = size;
+            this.MeasurementUnit = measurementUnit;
+            this.SizeFulltext = sizeFulltext;
         }
         
         /// <summary>
-        /// Small photo of this item&#x27;s nutrition label
+        /// Serving size
         /// </summary>
-        /// <value>Small photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="small", EmitDefaultValue=false)]
-        public string Small { get; set; }
+        /// <value>Serving size</value>
+        [DataMember(Name="size", EmitDefaultValue=false)]
+        public string Size { get; set; }
 
         /// <summary>
-        /// Thumbnail photo of this item&#x27;s nutrition label
+        /// Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
         /// </summary>
-        /// <value>Thumbnail photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="thumb", EmitDefaultValue=false)]
-        public string Thumb { get; set; }
+        /// <value>Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)</value>
+        [DataMember(Name="measurement_unit", EmitDefaultValue=false)]
+        public string MeasurementUnit { get; set; }
 
         /// <summary>
-        /// Full-sized photo of this item&#x27;s nutrition label
+        /// Serving size description
         /// </summary>
-        /// <value>Full-sized photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="display", EmitDefaultValue=false)]
-        public string Display { get; set; }
+        /// <value>Serving size description</value>
+        [DataMember(Name="size_fulltext", EmitDefaultValue=false)]
+        public string SizeFulltext { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +70,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectPackagingPhotosNutrition {\n");
-            sb.Append("  Small: ").Append(Small).Append("\n");
-            sb.Append("  Thumb: ").Append(Thumb).Append("\n");
-            sb.Append("  Display: ").Append(Display).Append("\n");
+            sb.Append("class BrandedFoodObjectServingUsda {\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  MeasurementUnit: ").Append(MeasurementUnit).Append("\n");
+            sb.Append("  SizeFulltext: ").Append(SizeFulltext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,34 +94,34 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectPackagingPhotosNutrition);
+            return this.Equals(input as BrandedFoodObjectServingUsda);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectPackagingPhotosNutrition instances are equal
+        /// Returns true if BrandedFoodObjectServingUsda instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectPackagingPhotosNutrition to be compared</param>
+        /// <param name="input">Instance of BrandedFoodObjectServingUsda to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectPackagingPhotosNutrition input)
+        public bool Equals(BrandedFoodObjectServingUsda input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Small == input.Small ||
-                    (this.Small != null &&
-                    this.Small.Equals(input.Small))
+                    this.Size == input.Size ||
+                    (this.Size != null &&
+                    this.Size.Equals(input.Size))
                 ) && 
                 (
-                    this.Thumb == input.Thumb ||
-                    (this.Thumb != null &&
-                    this.Thumb.Equals(input.Thumb))
+                    this.MeasurementUnit == input.MeasurementUnit ||
+                    (this.MeasurementUnit != null &&
+                    this.MeasurementUnit.Equals(input.MeasurementUnit))
                 ) && 
                 (
-                    this.Display == input.Display ||
-                    (this.Display != null &&
-                    this.Display.Equals(input.Display))
+                    this.SizeFulltext == input.SizeFulltext ||
+                    (this.SizeFulltext != null &&
+                    this.SizeFulltext.Equals(input.SizeFulltext))
                 );
         }
 
@@ -134,12 +134,12 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Small != null)
-                    hashCode = hashCode * 59 + this.Small.GetHashCode();
-                if (this.Thumb != null)
-                    hashCode = hashCode * 59 + this.Thumb.GetHashCode();
-                if (this.Display != null)
-                    hashCode = hashCode * 59 + this.Display.GetHashCode();
+                if (this.Size != null)
+                    hashCode = hashCode * 59 + this.Size.GetHashCode();
+                if (this.MeasurementUnit != null)
+                    hashCode = hashCode * 59 + this.MeasurementUnit.GetHashCode();
+                if (this.SizeFulltext != null)
+                    hashCode = hashCode * 59 + this.SizeFulltext.GetHashCode();
                 return hashCode;
             }
         }

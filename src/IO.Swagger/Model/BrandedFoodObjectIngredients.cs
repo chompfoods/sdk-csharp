@@ -24,44 +24,35 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// An object containing photos of this item&#x27;s nutrition label
+    /// An object containing this item&#x27;s ingredients in order of highest value to least
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectPackagingPhotosNutrition :  IEquatable<BrandedFoodObjectPackagingPhotosNutrition>, IValidatableObject
+        public partial class BrandedFoodObjectIngredients :  IEquatable<BrandedFoodObjectIngredients>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectPackagingPhotosNutrition" /> class.
+        /// Initializes a new instance of the <see cref="BrandedFoodObjectIngredients" /> class.
         /// </summary>
-        /// <param name="small">Small photo of this item&#x27;s nutrition label.</param>
-        /// <param name="thumb">Thumbnail photo of this item&#x27;s nutrition label.</param>
-        /// <param name="display">Full-sized photo of this item&#x27;s nutrition label.</param>
-        public BrandedFoodObjectPackagingPhotosNutrition(string small = default(string), string thumb = default(string), string display = default(string))
+        /// <param name="chomp">Ingredients for this item from Chomp&#x27;s internal database.</param>
+        /// <param name="usda">This branded food item&#x27;s ingredients, according to the USDA.</param>
+        public BrandedFoodObjectIngredients(string chomp = default(string), string usda = default(string))
         {
-            this.Small = small;
-            this.Thumb = thumb;
-            this.Display = display;
+            this.Chomp = chomp;
+            this.Usda = usda;
         }
         
         /// <summary>
-        /// Small photo of this item&#x27;s nutrition label
+        /// Ingredients for this item from Chomp&#x27;s internal database
         /// </summary>
-        /// <value>Small photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="small", EmitDefaultValue=false)]
-        public string Small { get; set; }
+        /// <value>Ingredients for this item from Chomp&#x27;s internal database</value>
+        [DataMember(Name="chomp", EmitDefaultValue=false)]
+        public string Chomp { get; set; }
 
         /// <summary>
-        /// Thumbnail photo of this item&#x27;s nutrition label
+        /// This branded food item&#x27;s ingredients, according to the USDA
         /// </summary>
-        /// <value>Thumbnail photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="thumb", EmitDefaultValue=false)]
-        public string Thumb { get; set; }
-
-        /// <summary>
-        /// Full-sized photo of this item&#x27;s nutrition label
-        /// </summary>
-        /// <value>Full-sized photo of this item&#x27;s nutrition label</value>
-        [DataMember(Name="display", EmitDefaultValue=false)]
-        public string Display { get; set; }
+        /// <value>This branded food item&#x27;s ingredients, according to the USDA</value>
+        [DataMember(Name="usda", EmitDefaultValue=false)]
+        public string Usda { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -70,10 +61,9 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectPackagingPhotosNutrition {\n");
-            sb.Append("  Small: ").Append(Small).Append("\n");
-            sb.Append("  Thumb: ").Append(Thumb).Append("\n");
-            sb.Append("  Display: ").Append(Display).Append("\n");
+            sb.Append("class BrandedFoodObjectIngredients {\n");
+            sb.Append("  Chomp: ").Append(Chomp).Append("\n");
+            sb.Append("  Usda: ").Append(Usda).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,34 +84,29 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectPackagingPhotosNutrition);
+            return this.Equals(input as BrandedFoodObjectIngredients);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectPackagingPhotosNutrition instances are equal
+        /// Returns true if BrandedFoodObjectIngredients instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectPackagingPhotosNutrition to be compared</param>
+        /// <param name="input">Instance of BrandedFoodObjectIngredients to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectPackagingPhotosNutrition input)
+        public bool Equals(BrandedFoodObjectIngredients input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Small == input.Small ||
-                    (this.Small != null &&
-                    this.Small.Equals(input.Small))
+                    this.Chomp == input.Chomp ||
+                    (this.Chomp != null &&
+                    this.Chomp.Equals(input.Chomp))
                 ) && 
                 (
-                    this.Thumb == input.Thumb ||
-                    (this.Thumb != null &&
-                    this.Thumb.Equals(input.Thumb))
-                ) && 
-                (
-                    this.Display == input.Display ||
-                    (this.Display != null &&
-                    this.Display.Equals(input.Display))
+                    this.Usda == input.Usda ||
+                    (this.Usda != null &&
+                    this.Usda.Equals(input.Usda))
                 );
         }
 
@@ -134,12 +119,10 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Small != null)
-                    hashCode = hashCode * 59 + this.Small.GetHashCode();
-                if (this.Thumb != null)
-                    hashCode = hashCode * 59 + this.Thumb.GetHashCode();
-                if (this.Display != null)
-                    hashCode = hashCode * 59 + this.Display.GetHashCode();
+                if (this.Chomp != null)
+                    hashCode = hashCode * 59 + this.Chomp.GetHashCode();
+                if (this.Usda != null)
+                    hashCode = hashCode * 59 + this.Usda.GetHashCode();
                 return hashCode;
             }
         }
