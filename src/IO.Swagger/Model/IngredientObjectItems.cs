@@ -1,7 +1,7 @@
 /* 
  * Chomp Food Database API Documentation
  *
- * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | - -- -- -- | - -- -- -- - | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -40,10 +40,10 @@ namespace IO.Swagger.Model
         /// <param name="dietLabels">dietLabels.</param>
         /// <param name="components">An array of objects containing the constituent parts of a food (e.g. bone is a component of meat).</param>
         /// <param name="portions">An array of objects containing information on discrete amounts of a food found in this item.</param>
-        /// <param name="commonNames">Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
+        /// <param name="commonName">Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
+        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonName = default(string), string description = default(string), string footnote = default(string))
         {
             this.Name = name;
             this.Categories = categories;
@@ -53,7 +53,7 @@ namespace IO.Swagger.Model
             this.DietLabels = dietLabels;
             this.Components = components;
             this.Portions = portions;
-            this.CommonNames = commonNames;
+            this.CommonName = commonName;
             this.Description = description;
             this.Footnote = footnote;
         }
@@ -112,11 +112,11 @@ namespace IO.Swagger.Model
         public List<IngredientObjectPortions> Portions { get; set; }
 
         /// <summary>
-        /// Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
+        /// Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
         /// </summary>
-        /// <value>Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)</value>
-        [DataMember(Name="common_names", EmitDefaultValue=false)]
-        public string CommonNames { get; set; }
+        /// <value>Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)</value>
+        [DataMember(Name="common_name", EmitDefaultValue=false)]
+        public string CommonName { get; set; }
 
         /// <summary>
         /// A description of this item
@@ -148,7 +148,7 @@ namespace IO.Swagger.Model
             sb.Append("  DietLabels: ").Append(DietLabels).Append("\n");
             sb.Append("  Components: ").Append(Components).Append("\n");
             sb.Append("  Portions: ").Append(Portions).Append("\n");
-            sb.Append("  CommonNames: ").Append(CommonNames).Append("\n");
+            sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Footnote: ").Append(Footnote).Append("\n");
             sb.Append("}\n");
@@ -230,9 +230,9 @@ namespace IO.Swagger.Model
                     this.Portions.SequenceEqual(input.Portions)
                 ) && 
                 (
-                    this.CommonNames == input.CommonNames ||
-                    (this.CommonNames != null &&
-                    this.CommonNames.Equals(input.CommonNames))
+                    this.CommonName == input.CommonName ||
+                    (this.CommonName != null &&
+                    this.CommonName.Equals(input.CommonName))
                 ) && 
                 (
                     this.Description == input.Description ||
@@ -271,8 +271,8 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Components.GetHashCode();
                 if (this.Portions != null)
                     hashCode = hashCode * 59 + this.Portions.GetHashCode();
-                if (this.CommonNames != null)
-                    hashCode = hashCode * 59 + this.CommonNames.GetHashCode();
+                if (this.CommonName != null)
+                    hashCode = hashCode * 59 + this.CommonName.GetHashCode();
                 if (this.Description != null)
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Footnote != null)
