@@ -130,22 +130,6 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Nutrients'
         }
         /// <summary>
-        /// Test the property 'CalorieConversionFactor'
-        /// </summary>
-        [Test]
-        public void CalorieConversionFactorTest()
-        {
-            // TODO unit test for the property 'CalorieConversionFactor'
-        }
-        /// <summary>
-        /// Test the property 'ProteinConversionFactor'
-        /// </summary>
-        [Test]
-        public void ProteinConversionFactorTest()
-        {
-            // TODO unit test for the property 'ProteinConversionFactor'
-        }
-        /// <summary>
         /// Test the property 'DietLabels'
         /// </summary>
         [Test]

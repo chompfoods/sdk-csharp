@@ -43,7 +43,7 @@ namespace IO.Swagger.Model
         /// <param name="commonNames">Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), IngredientObjectNutrients nutrients = default(IngredientObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
+        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), IngredientObjectNutrients nutrients = default(IngredientObjectNutrients), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
         {
             this.Name = name;
             this.Categories = categories;
@@ -81,7 +81,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets CalorieConversionFactor
         /// </summary>
         [DataMember(Name="calorie_conversion_factor", EmitDefaultValue=false)]
-        public BrandedFoodObjectCalorieConversionFactor CalorieConversionFactor { get; set; }
+        public IngredientObjectCalorieConversionFactor CalorieConversionFactor { get; set; }
 
         /// <summary>
         /// The multiplication factor used to calculate protein from nitrogen

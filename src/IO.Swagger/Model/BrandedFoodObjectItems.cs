@@ -40,8 +40,6 @@ namespace IO.Swagger.Model
         /// <param name="serving">serving.</param>
         /// <param name="categories">categories.</param>
         /// <param name="nutrients">nutrients.</param>
-        /// <param name="calorieConversionFactor">calorieConversionFactor.</param>
-        /// <param name="proteinConversionFactor">The multiplication factor used to calculate protein from nitrogen.</param>
         /// <param name="dietLabels">dietLabels.</param>
         /// <param name="dietFlags">An array of ingredient objects that were flagged while grading this item for compatibility with each diet.</param>
         /// <param name="packagingPhotos">packagingPhotos.</param>
@@ -57,7 +55,7 @@ namespace IO.Swagger.Model
         /// <param name="vitamins">An array of vitamins that are found in this item.</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -67,8 +65,6 @@ namespace IO.Swagger.Model
             this.Serving = serving;
             this.Categories = categories;
             this.Nutrients = nutrients;
-            this.CalorieConversionFactor = calorieConversionFactor;
-            this.ProteinConversionFactor = proteinConversionFactor;
             this.DietLabels = dietLabels;
             this.DietFlags = dietFlags;
             this.PackagingPhotos = packagingPhotos;
@@ -136,19 +132,6 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="nutrients", EmitDefaultValue=false)]
         public BrandedFoodObjectNutrients Nutrients { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CalorieConversionFactor
-        /// </summary>
-        [DataMember(Name="calorie_conversion_factor", EmitDefaultValue=false)]
-        public BrandedFoodObjectCalorieConversionFactor CalorieConversionFactor { get; set; }
-
-        /// <summary>
-        /// The multiplication factor used to calculate protein from nitrogen
-        /// </summary>
-        /// <value>The multiplication factor used to calculate protein from nitrogen</value>
-        [DataMember(Name="protein_conversion_factor", EmitDefaultValue=false)]
-        public decimal? ProteinConversionFactor { get; set; }
 
         /// <summary>
         /// Gets or Sets DietLabels
@@ -268,8 +251,6 @@ namespace IO.Swagger.Model
             sb.Append("  Serving: ").Append(Serving).Append("\n");
             sb.Append("  Categories: ").Append(Categories).Append("\n");
             sb.Append("  Nutrients: ").Append(Nutrients).Append("\n");
-            sb.Append("  CalorieConversionFactor: ").Append(CalorieConversionFactor).Append("\n");
-            sb.Append("  ProteinConversionFactor: ").Append(ProteinConversionFactor).Append("\n");
             sb.Append("  DietLabels: ").Append(DietLabels).Append("\n");
             sb.Append("  DietFlags: ").Append(DietFlags).Append("\n");
             sb.Append("  PackagingPhotos: ").Append(PackagingPhotos).Append("\n");
@@ -359,16 +340,6 @@ namespace IO.Swagger.Model
                     this.Nutrients == input.Nutrients ||
                     (this.Nutrients != null &&
                     this.Nutrients.Equals(input.Nutrients))
-                ) && 
-                (
-                    this.CalorieConversionFactor == input.CalorieConversionFactor ||
-                    (this.CalorieConversionFactor != null &&
-                    this.CalorieConversionFactor.Equals(input.CalorieConversionFactor))
-                ) && 
-                (
-                    this.ProteinConversionFactor == input.ProteinConversionFactor ||
-                    (this.ProteinConversionFactor != null &&
-                    this.ProteinConversionFactor.Equals(input.ProteinConversionFactor))
                 ) && 
                 (
                     this.DietLabels == input.DietLabels ||
@@ -482,10 +453,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Categories.GetHashCode();
                 if (this.Nutrients != null)
                     hashCode = hashCode * 59 + this.Nutrients.GetHashCode();
-                if (this.CalorieConversionFactor != null)
-                    hashCode = hashCode * 59 + this.CalorieConversionFactor.GetHashCode();
-                if (this.ProteinConversionFactor != null)
-                    hashCode = hashCode * 59 + this.ProteinConversionFactor.GetHashCode();
                 if (this.DietLabels != null)
                     hashCode = hashCode * 59 + this.DietLabels.GetHashCode();
                 if (this.DietFlags != null)

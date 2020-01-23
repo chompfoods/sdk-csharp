@@ -109,7 +109,6 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [Model.BrandedFoodObject](docs/BrandedFoodObject.md)
- - [Model.BrandedFoodObjectCalorieConversionFactor](docs/BrandedFoodObjectCalorieConversionFactor.md)
  - [Model.BrandedFoodObjectCountryDetails](docs/BrandedFoodObjectCountryDetails.md)
  - [Model.BrandedFoodObjectDietFlags](docs/BrandedFoodObjectDietFlags.md)
  - [Model.BrandedFoodObjectDietLabels](docs/BrandedFoodObjectDietLabels.md)
@@ -130,6 +129,7 @@ Class | Method | HTTP request | Description
  - [Model.BrandedFoodObjectServingChomp](docs/BrandedFoodObjectServingChomp.md)
  - [Model.BrandedFoodObjectServingUsda](docs/BrandedFoodObjectServingUsda.md)
  - [Model.IngredientObject](docs/IngredientObject.md)
+ - [Model.IngredientObjectCalorieConversionFactor](docs/IngredientObjectCalorieConversionFactor.md)
  - [Model.IngredientObjectComponents](docs/IngredientObjectComponents.md)
  - [Model.IngredientObjectItems](docs/IngredientObjectItems.md)
  - [Model.IngredientObjectNutrients](docs/IngredientObjectNutrients.md)
