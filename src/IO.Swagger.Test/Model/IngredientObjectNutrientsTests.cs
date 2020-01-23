@@ -66,12 +66,84 @@ namespace IO.Swagger.Test
 
 
         /// <summary>
-        /// Test the property 'Usda'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void UsdaTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'Usda'
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'Per100g'
+        /// </summary>
+        [Test]
+        public void Per100gTest()
+        {
+            // TODO unit test for the property 'Per100g'
+        }
+        /// <summary>
+        /// Test the property 'MeasurementUnit'
+        /// </summary>
+        [Test]
+        public void MeasurementUnitTest()
+        {
+            // TODO unit test for the property 'MeasurementUnit'
+        }
+        /// <summary>
+        /// Test the property 'Min'
+        /// </summary>
+        [Test]
+        public void MinTest()
+        {
+            // TODO unit test for the property 'Min'
+        }
+        /// <summary>
+        /// Test the property 'Max'
+        /// </summary>
+        [Test]
+        public void MaxTest()
+        {
+            // TODO unit test for the property 'Max'
+        }
+        /// <summary>
+        /// Test the property 'Median'
+        /// </summary>
+        [Test]
+        public void MedianTest()
+        {
+            // TODO unit test for the property 'Median'
+        }
+        /// <summary>
+        /// Test the property 'Rank'
+        /// </summary>
+        [Test]
+        public void RankTest()
+        {
+            // TODO unit test for the property 'Rank'
+        }
+        /// <summary>
+        /// Test the property 'DataPoints'
+        /// </summary>
+        [Test]
+        public void DataPointsTest()
+        {
+            // TODO unit test for the property 'DataPoints'
+        }
+        /// <summary>
+        /// Test the property 'Footnote'
+        /// </summary>
+        [Test]
+        public void FootnoteTest()
+        {
+            // TODO unit test for the property 'Footnote'
+        }
+        /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Test]
+        public void DescriptionTest()
+        {
+            // TODO unit test for the property 'Description'
         }
 
     }

@@ -66,20 +66,52 @@ namespace IO.Swagger.Test
 
 
         /// <summary>
-        /// Test the property 'Chomp'
+        /// Test the property 'Name'
         /// </summary>
         [Test]
-        public void ChompTest()
+        public void NameTest()
         {
-            // TODO unit test for the property 'Chomp'
+            // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'Usda'
+        /// Test the property 'Per100g'
         /// </summary>
         [Test]
-        public void UsdaTest()
+        public void Per100gTest()
         {
-            // TODO unit test for the property 'Usda'
+            // TODO unit test for the property 'Per100g'
+        }
+        /// <summary>
+        /// Test the property 'MeasurementUnit'
+        /// </summary>
+        [Test]
+        public void MeasurementUnitTest()
+        {
+            // TODO unit test for the property 'MeasurementUnit'
+        }
+        /// <summary>
+        /// Test the property 'Rank'
+        /// </summary>
+        [Test]
+        public void RankTest()
+        {
+            // TODO unit test for the property 'Rank'
+        }
+        /// <summary>
+        /// Test the property 'DataPoints'
+        /// </summary>
+        [Test]
+        public void DataPointsTest()
+        {
+            // TODO unit test for the property 'DataPoints'
+        }
+        /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Test]
+        public void DescriptionTest()
+        {
+            // TODO unit test for the property 'Description'
         }
 
     }

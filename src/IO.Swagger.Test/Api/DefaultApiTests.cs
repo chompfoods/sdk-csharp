@@ -74,18 +74,6 @@ namespace IO.Swagger.Test
             //Assert.IsInstanceOf<BrandedFoodObject> (response, "response is BrandedFoodObject");
         }
         /// <summary>
-        /// Test FoodBrandedIdPhpGet
-        /// </summary>
-        [Test]
-        public void FoodBrandedIdPhpGetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //int? id = null;
-            //string source = null;
-            //var response = instance.FoodBrandedIdPhpGet(id, source);
-            //Assert.IsInstanceOf<BrandedFoodObject> (response, "response is BrandedFoodObject");
-        }
-        /// <summary>
         /// Test FoodBrandedNamePhpGet
         /// </summary>
         [Test]

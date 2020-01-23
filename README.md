@@ -100,7 +100,6 @@ All URIs are relative to *https://chompthis.com/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**FoodBrandedBarcodePhpGet**](docs/DefaultApi.md#foodbrandedbarcodephpget) | **GET** /food/branded/barcode.php | Get a branded food item using a barcode
-*DefaultApi* | [**FoodBrandedIdPhpGet**](docs/DefaultApi.md#foodbrandedidphpget) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**FoodBrandedNamePhpGet**](docs/DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**FoodBrandedSearchPhpGet**](docs/DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**FoodIngredientSearchPhpGet**](docs/DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
@@ -115,19 +114,14 @@ Class | Method | HTTP request | Description
  - [Model.BrandedFoodObjectDietLabelsGlutenFree](docs/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [Model.BrandedFoodObjectDietLabelsVegan](docs/BrandedFoodObjectDietLabelsVegan.md)
  - [Model.BrandedFoodObjectDietLabelsVegetarian](docs/BrandedFoodObjectDietLabelsVegetarian.md)
- - [Model.BrandedFoodObjectIngredients](docs/BrandedFoodObjectIngredients.md)
  - [Model.BrandedFoodObjectItems](docs/BrandedFoodObjectItems.md)
  - [Model.BrandedFoodObjectNutrients](docs/BrandedFoodObjectNutrients.md)
- - [Model.BrandedFoodObjectNutrientsChomp](docs/BrandedFoodObjectNutrientsChomp.md)
- - [Model.BrandedFoodObjectNutrientsUsda](docs/BrandedFoodObjectNutrientsUsda.md)
  - [Model.BrandedFoodObjectPackage](docs/BrandedFoodObjectPackage.md)
  - [Model.BrandedFoodObjectPackagingPhotos](docs/BrandedFoodObjectPackagingPhotos.md)
  - [Model.BrandedFoodObjectPackagingPhotosFront](docs/BrandedFoodObjectPackagingPhotosFront.md)
  - [Model.BrandedFoodObjectPackagingPhotosIngredients](docs/BrandedFoodObjectPackagingPhotosIngredients.md)
  - [Model.BrandedFoodObjectPackagingPhotosNutrition](docs/BrandedFoodObjectPackagingPhotosNutrition.md)
  - [Model.BrandedFoodObjectServing](docs/BrandedFoodObjectServing.md)
- - [Model.BrandedFoodObjectServingChomp](docs/BrandedFoodObjectServingChomp.md)
- - [Model.BrandedFoodObjectServingUsda](docs/BrandedFoodObjectServingUsda.md)
  - [Model.IngredientObject](docs/IngredientObject.md)
  - [Model.IngredientObjectCalorieConversionFactor](docs/IngredientObjectCalorieConversionFactor.md)
  - [Model.IngredientObjectComponents](docs/IngredientObjectComponents.md)

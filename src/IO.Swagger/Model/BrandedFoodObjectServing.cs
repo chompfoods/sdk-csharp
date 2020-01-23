@@ -32,25 +32,36 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BrandedFoodObjectServing" /> class.
         /// </summary>
-        /// <param name="chomp">chomp.</param>
-        /// <param name="usda">usda.</param>
-        public BrandedFoodObjectServing(BrandedFoodObjectServingChomp chomp = default(BrandedFoodObjectServingChomp), BrandedFoodObjectServingUsda usda = default(BrandedFoodObjectServingUsda))
+        /// <param name="size">Serving size.</param>
+        /// <param name="measurementUnit">Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp).</param>
+        /// <param name="sizeFulltext">Serving size description.</param>
+        public BrandedFoodObjectServing(string size = default(string), string measurementUnit = default(string), string sizeFulltext = default(string))
         {
-            this.Chomp = chomp;
-            this.Usda = usda;
+            this.Size = size;
+            this.MeasurementUnit = measurementUnit;
+            this.SizeFulltext = sizeFulltext;
         }
         
         /// <summary>
-        /// Gets or Sets Chomp
+        /// Serving size
         /// </summary>
-        [DataMember(Name="chomp", EmitDefaultValue=false)]
-        public BrandedFoodObjectServingChomp Chomp { get; set; }
+        /// <value>Serving size</value>
+        [DataMember(Name="size", EmitDefaultValue=false)]
+        public string Size { get; set; }
 
         /// <summary>
-        /// Gets or Sets Usda
+        /// Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
         /// </summary>
-        [DataMember(Name="usda", EmitDefaultValue=false)]
-        public BrandedFoodObjectServingUsda Usda { get; set; }
+        /// <value>Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)</value>
+        [DataMember(Name="measurement_unit", EmitDefaultValue=false)]
+        public string MeasurementUnit { get; set; }
+
+        /// <summary>
+        /// Serving size description
+        /// </summary>
+        /// <value>Serving size description</value>
+        [DataMember(Name="size_fulltext", EmitDefaultValue=false)]
+        public string SizeFulltext { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -60,8 +71,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BrandedFoodObjectServing {\n");
-            sb.Append("  Chomp: ").Append(Chomp).Append("\n");
-            sb.Append("  Usda: ").Append(Usda).Append("\n");
+            sb.Append("  Size: ").Append(Size).Append("\n");
+            sb.Append("  MeasurementUnit: ").Append(MeasurementUnit).Append("\n");
+            sb.Append("  SizeFulltext: ").Append(SizeFulltext).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -97,14 +109,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Chomp == input.Chomp ||
-                    (this.Chomp != null &&
-                    this.Chomp.Equals(input.Chomp))
+                    this.Size == input.Size ||
+                    (this.Size != null &&
+                    this.Size.Equals(input.Size))
                 ) && 
                 (
-                    this.Usda == input.Usda ||
-                    (this.Usda != null &&
-                    this.Usda.Equals(input.Usda))
+                    this.MeasurementUnit == input.MeasurementUnit ||
+                    (this.MeasurementUnit != null &&
+                    this.MeasurementUnit.Equals(input.MeasurementUnit))
+                ) && 
+                (
+                    this.SizeFulltext == input.SizeFulltext ||
+                    (this.SizeFulltext != null &&
+                    this.SizeFulltext.Equals(input.SizeFulltext))
                 );
         }
 
@@ -117,10 +134,12 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Chomp != null)
-                    hashCode = hashCode * 59 + this.Chomp.GetHashCode();
-                if (this.Usda != null)
-                    hashCode = hashCode * 59 + this.Usda.GetHashCode();
+                if (this.Size != null)
+                    hashCode = hashCode * 59 + this.Size.GetHashCode();
+                if (this.MeasurementUnit != null)
+                    hashCode = hashCode * 59 + this.MeasurementUnit.GetHashCode();
+                if (this.SizeFulltext != null)
+                    hashCode = hashCode * 59 + this.SizeFulltext.GetHashCode();
                 return hashCode;
             }
         }

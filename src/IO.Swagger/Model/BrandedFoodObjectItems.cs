@@ -35,11 +35,11 @@ namespace IO.Swagger.Model
         /// <param name="barcode">EAN/UPC barcode.</param>
         /// <param name="name">Item name as provided by brand owner or as shown on packaging.</param>
         /// <param name="brand">The brand name that owns this item.</param>
-        /// <param name="ingredients">ingredients.</param>
+        /// <param name="ingredients">This food item&#x27;s ingredients from greatest quantity to least.</param>
         /// <param name="package">package.</param>
         /// <param name="serving">serving.</param>
         /// <param name="categories">categories.</param>
-        /// <param name="nutrients">nutrients.</param>
+        /// <param name="nutrients">An array containing nutrient informatio objects for this food item.</param>
         /// <param name="dietLabels">dietLabels.</param>
         /// <param name="dietFlags">An array of ingredient objects that were flagged while grading this item for compatibility with each diet.</param>
         /// <param name="packagingPhotos">packagingPhotos.</param>
@@ -55,7 +55,7 @@ namespace IO.Swagger.Model
         /// <param name="vitamins">An array of vitamins that are found in this item.</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), string ingredients = default(string), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), List<BrandedFoodObjectNutrients> nutrients = default(List<BrandedFoodObjectNutrients>), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -104,10 +104,11 @@ namespace IO.Swagger.Model
         public string Brand { get; set; }
 
         /// <summary>
-        /// Gets or Sets Ingredients
+        /// This food item&#x27;s ingredients from greatest quantity to least
         /// </summary>
+        /// <value>This food item&#x27;s ingredients from greatest quantity to least</value>
         [DataMember(Name="ingredients", EmitDefaultValue=false)]
-        public BrandedFoodObjectIngredients Ingredients { get; set; }
+        public string Ingredients { get; set; }
 
         /// <summary>
         /// Gets or Sets Package
@@ -128,10 +129,11 @@ namespace IO.Swagger.Model
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// Gets or Sets Nutrients
+        /// An array containing nutrient informatio objects for this food item
         /// </summary>
+        /// <value>An array containing nutrient informatio objects for this food item</value>
         [DataMember(Name="nutrients", EmitDefaultValue=false)]
-        public BrandedFoodObjectNutrients Nutrients { get; set; }
+        public List<BrandedFoodObjectNutrients> Nutrients { get; set; }
 
         /// <summary>
         /// Gets or Sets DietLabels
@@ -338,8 +340,9 @@ namespace IO.Swagger.Model
                 ) && 
                 (
                     this.Nutrients == input.Nutrients ||
-                    (this.Nutrients != null &&
-                    this.Nutrients.Equals(input.Nutrients))
+                    this.Nutrients != null &&
+                    input.Nutrients != null &&
+                    this.Nutrients.SequenceEqual(input.Nutrients)
                 ) && 
                 (
                     this.DietLabels == input.DietLabels ||
