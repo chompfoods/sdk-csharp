@@ -28,7 +28,6 @@ Name | Type | Description | Notes
 **Vitamins** | **List&lt;string&gt;** | An array of vitamins that are found in this item | [optional] 
 **Description** | **string** | A description of this item | [optional] 
 **Keywords** | **List&lt;string&gt;** | An array of keywords that can be used to describe this item | [optional] 
-**Footnote** | **string** | Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -57,8 +57,7 @@ namespace IO.Swagger.Model
         /// <param name="vitamins">An array of vitamins that are found in this item.</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
-        /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -85,7 +84,6 @@ namespace IO.Swagger.Model
             this.Vitamins = vitamins;
             this.Description = description;
             this.Keywords = keywords;
-            this.Footnote = footnote;
         }
         
         /// <summary>
@@ -255,13 +253,6 @@ namespace IO.Swagger.Model
         public List<string> Keywords { get; set; }
 
         /// <summary>
-        /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-        /// </summary>
-        /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</value>
-        [DataMember(Name="footnote", EmitDefaultValue=false)]
-        public string Footnote { get; set; }
-
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -294,7 +285,6 @@ namespace IO.Swagger.Model
             sb.Append("  Vitamins: ").Append(Vitamins).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
-            sb.Append("  Footnote: ").Append(Footnote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -464,11 +454,6 @@ namespace IO.Swagger.Model
                     this.Keywords != null &&
                     input.Keywords != null &&
                     this.Keywords.SequenceEqual(input.Keywords)
-                ) && 
-                (
-                    this.Footnote == input.Footnote ||
-                    (this.Footnote != null &&
-                    this.Footnote.Equals(input.Footnote))
                 );
         }
 
@@ -531,8 +516,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Keywords != null)
                     hashCode = hashCode * 59 + this.Keywords.GetHashCode();
-                if (this.Footnote != null)
-                    hashCode = hashCode * 59 + this.Footnote.GetHashCode();
                 return hashCode;
             }
         }

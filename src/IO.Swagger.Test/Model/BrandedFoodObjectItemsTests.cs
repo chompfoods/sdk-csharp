@@ -265,14 +265,6 @@ namespace IO.Swagger.Test
         {
             // TODO unit test for the property 'Keywords'
         }
-        /// <summary>
-        /// Test the property 'Footnote'
-        /// </summary>
-        [Test]
-        public void FootnoteTest()
-        {
-            // TODO unit test for the property 'Footnote'
-        }
 
     }
 
