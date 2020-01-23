@@ -170,22 +170,6 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'PackagingPhotos'
         }
         /// <summary>
-        /// Test the property 'Components'
-        /// </summary>
-        [Test]
-        public void ComponentsTest()
-        {
-            // TODO unit test for the property 'Components'
-        }
-        /// <summary>
-        /// Test the property 'Portions'
-        /// </summary>
-        [Test]
-        public void PortionsTest()
-        {
-            // TODO unit test for the property 'Portions'
-        }
-        /// <summary>
         /// Test the property 'Allergens'
         /// </summary>
         [Test]

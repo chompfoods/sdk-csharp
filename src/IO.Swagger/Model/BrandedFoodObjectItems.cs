@@ -45,8 +45,6 @@ namespace IO.Swagger.Model
         /// <param name="dietLabels">dietLabels.</param>
         /// <param name="dietFlags">An array of ingredient objects that were flagged while grading this item for compatibility with each diet.</param>
         /// <param name="packagingPhotos">packagingPhotos.</param>
-        /// <param name="components">An array of objects containing the constituent parts of a food (e.g. bone is a component of meat).</param>
-        /// <param name="portions">An array of objects containing information on discrete amounts of a food found in this item.</param>
         /// <param name="allergens">An array of ingredients in this item that may cause allergic reactions in people.</param>
         /// <param name="brandList">An array of brands we have associated with this item. Some items are sold by more than 1 brand..</param>
         /// <param name="countries">An array of countries where this item is sold.</param>
@@ -60,7 +58,7 @@ namespace IO.Swagger.Model
         /// <param name="description">A description of this item.</param>
         /// <param name="keywords">An array of keywords that can be used to describe this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
+        public BrandedFoodObjectItems(string barcode = default(string), string name = default(string), string brand = default(string), BrandedFoodObjectIngredients ingredients = default(BrandedFoodObjectIngredients), BrandedFoodObjectPackage package = default(BrandedFoodObjectPackage), BrandedFoodObjectServing serving = default(BrandedFoodObjectServing), List<string> categories = default(List<string>), BrandedFoodObjectNutrients nutrients = default(BrandedFoodObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectDietFlags> dietFlags = default(List<BrandedFoodObjectDietFlags>), BrandedFoodObjectPackagingPhotos packagingPhotos = default(BrandedFoodObjectPackagingPhotos), List<string> allergens = default(List<string>), List<string> brandList = default(List<string>), List<string> countries = default(List<string>), BrandedFoodObjectCountryDetails countryDetails = default(BrandedFoodObjectCountryDetails), List<string> palmOilIngredients = default(List<string>), List<string> ingredientList = default(List<string>), bool? hasEnglishIngredients = default(bool?), List<string> minerals = default(List<string>), List<string> traces = default(List<string>), List<string> vitamins = default(List<string>), string description = default(string), List<string> keywords = default(List<string>), string footnote = default(string))
         {
             this.Barcode = barcode;
             this.Name = name;
@@ -75,8 +73,6 @@ namespace IO.Swagger.Model
             this.DietLabels = dietLabels;
             this.DietFlags = dietFlags;
             this.PackagingPhotos = packagingPhotos;
-            this.Components = components;
-            this.Portions = portions;
             this.Allergens = allergens;
             this.BrandList = brandList;
             this.Countries = countries;
@@ -174,20 +170,6 @@ namespace IO.Swagger.Model
         /// </summary>
         [DataMember(Name="packaging_photos", EmitDefaultValue=false)]
         public BrandedFoodObjectPackagingPhotos PackagingPhotos { get; set; }
-
-        /// <summary>
-        /// An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-        /// </summary>
-        /// <value>An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)</value>
-        [DataMember(Name="components", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectComponents> Components { get; set; }
-
-        /// <summary>
-        /// An array of objects containing information on discrete amounts of a food found in this item
-        /// </summary>
-        /// <value>An array of objects containing information on discrete amounts of a food found in this item</value>
-        [DataMember(Name="portions", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectPortions> Portions { get; set; }
 
         /// <summary>
         /// An array of ingredients in this item that may cause allergic reactions in people
@@ -300,8 +282,6 @@ namespace IO.Swagger.Model
             sb.Append("  DietLabels: ").Append(DietLabels).Append("\n");
             sb.Append("  DietFlags: ").Append(DietFlags).Append("\n");
             sb.Append("  PackagingPhotos: ").Append(PackagingPhotos).Append("\n");
-            sb.Append("  Components: ").Append(Components).Append("\n");
-            sb.Append("  Portions: ").Append(Portions).Append("\n");
             sb.Append("  Allergens: ").Append(Allergens).Append("\n");
             sb.Append("  BrandList: ").Append(BrandList).Append("\n");
             sb.Append("  Countries: ").Append(Countries).Append("\n");
@@ -417,18 +397,6 @@ namespace IO.Swagger.Model
                     this.PackagingPhotos.Equals(input.PackagingPhotos))
                 ) && 
                 (
-                    this.Components == input.Components ||
-                    this.Components != null &&
-                    input.Components != null &&
-                    this.Components.SequenceEqual(input.Components)
-                ) && 
-                (
-                    this.Portions == input.Portions ||
-                    this.Portions != null &&
-                    input.Portions != null &&
-                    this.Portions.SequenceEqual(input.Portions)
-                ) && 
-                (
                     this.Allergens == input.Allergens ||
                     this.Allergens != null &&
                     input.Allergens != null &&
@@ -539,10 +507,6 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.DietFlags.GetHashCode();
                 if (this.PackagingPhotos != null)
                     hashCode = hashCode * 59 + this.PackagingPhotos.GetHashCode();
-                if (this.Components != null)
-                    hashCode = hashCode * 59 + this.Components.GetHashCode();
-                if (this.Portions != null)
-                    hashCode = hashCode * 59 + this.Portions.GetHashCode();
                 if (this.Allergens != null)
                     hashCode = hashCode * 59 + this.Allergens.GetHashCode();
                 if (this.BrandList != null)

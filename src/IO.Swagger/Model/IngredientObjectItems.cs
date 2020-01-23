@@ -43,7 +43,7 @@ namespace IO.Swagger.Model
         /// <param name="commonNames">Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
         /// <param name="description">A description of this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), IngredientObjectNutrients nutrients = default(IngredientObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
+        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), IngredientObjectNutrients nutrients = default(IngredientObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
         {
             this.Name = name;
             this.Categories = categories;
@@ -101,14 +101,14 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <value>An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectComponents> Components { get; set; }
+        public List<IngredientObjectComponents> Components { get; set; }
 
         /// <summary>
         /// An array of objects containing information on discrete amounts of a food found in this item
         /// </summary>
         /// <value>An array of objects containing information on discrete amounts of a food found in this item</value>
         [DataMember(Name="portions", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectPortions> Portions { get; set; }
+        public List<IngredientObjectPortions> Portions { get; set; }
 
         /// <summary>
         /// Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
