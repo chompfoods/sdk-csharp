@@ -127,7 +127,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>IngredientObject</returns>
-        IngredientObject FoodIngredientSearchPhpGet (int? find, bool? raw = null, int? limit = null);
+        IngredientObject FoodIngredientSearchPhpGet (string find, bool? raw = null, int? limit = null);
 
         /// <summary>
         /// Get raw/generic food ingredient item(s)
@@ -140,7 +140,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>ApiResponse of IngredientObject</returns>
-        ApiResponse<IngredientObject> FoodIngredientSearchPhpGetWithHttpInfo (int? find, bool? raw = null, int? limit = null);
+        ApiResponse<IngredientObject> FoodIngredientSearchPhpGetWithHttpInfo (string find, bool? raw = null, int? limit = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -247,7 +247,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>Task of IngredientObject</returns>
-        System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (int? find, bool? raw = null, int? limit = null);
+        System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (string find, bool? raw = null, int? limit = null);
 
         /// <summary>
         /// Get raw/generic food ingredient item(s)
@@ -260,7 +260,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>Task of ApiResponse (IngredientObject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? raw = null, int? limit = null);
+        System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (string find, bool? raw = null, int? limit = null);
         #endregion Asynchronous Operations
     }
 
@@ -887,7 +887,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>IngredientObject</returns>
-        public IngredientObject FoodIngredientSearchPhpGet (int? find, bool? raw = null, int? limit = null)
+        public IngredientObject FoodIngredientSearchPhpGet (string find, bool? raw = null, int? limit = null)
         {
              ApiResponse<IngredientObject> localVarResponse = FoodIngredientSearchPhpGetWithHttpInfo(find, raw, limit);
              return localVarResponse.Data;
@@ -901,7 +901,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>ApiResponse of IngredientObject</returns>
-        public ApiResponse< IngredientObject > FoodIngredientSearchPhpGetWithHttpInfo (int? find, bool? raw = null, int? limit = null)
+        public ApiResponse< IngredientObject > FoodIngredientSearchPhpGetWithHttpInfo (string find, bool? raw = null, int? limit = null)
         {
             // verify the required parameter 'find' is set
             if (find == null)
@@ -963,7 +963,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>Task of IngredientObject</returns>
-        public async System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (int? find, bool? raw = null, int? limit = null)
+        public async System.Threading.Tasks.Task<IngredientObject> FoodIngredientSearchPhpGetAsync (string find, bool? raw = null, int? limit = null)
         {
              ApiResponse<IngredientObject> localVarResponse = await FoodIngredientSearchPhpGetAsyncWithHttpInfo(find, raw, limit);
              return localVarResponse.Data;
@@ -978,7 +978,7 @@ namespace IO.Swagger.Api
         /// <param name="raw">#### Optionally filter the search result to only include raw ingredients.  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60;  (optional)</param>
         /// <param name="limit">#### Set maximum number of records you want the API to return, per search term.  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60;  (optional)</param>
         /// <returns>Task of ApiResponse (IngredientObject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (int? find, bool? raw = null, int? limit = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IngredientObject>> FoodIngredientSearchPhpGetAsyncWithHttpInfo (string find, bool? raw = null, int? limit = null)
         {
             // verify the required parameter 'find' is set
             if (find == null)

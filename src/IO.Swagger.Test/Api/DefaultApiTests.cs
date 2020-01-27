@@ -117,7 +117,7 @@ namespace IO.Swagger.Test
         public void FoodIngredientSearchPhpGetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int? find = null;
+            //string find = null;
             //bool? raw = null;
             //int? limit = null;
             //var response = instance.FoodIngredientSearchPhpGet(find, raw, limit);
