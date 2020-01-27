@@ -118,10 +118,9 @@ namespace IO.Swagger.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //int? find = null;
-            //bool? list = null;
             //bool? raw = null;
             //int? limit = null;
-            //var response = instance.FoodIngredientSearchPhpGet(find, list, raw, limit);
+            //var response = instance.FoodIngredientSearchPhpGet(find, raw, limit);
             //Assert.IsInstanceOf<IngredientObject> (response, "response is IngredientObject");
         }
     }
