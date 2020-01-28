@@ -137,6 +137,22 @@ namespace IO.Swagger.Test
         {
             // TODO unit test for the property 'Footnote'
         }
+        /// <summary>
+        /// Test the property 'SearchTerm'
+        /// </summary>
+        [Test]
+        public void SearchTermTest()
+        {
+            // TODO unit test for the property 'SearchTerm'
+        }
+        /// <summary>
+        /// Test the property 'Score'
+        /// </summary>
+        [Test]
+        public void ScoreTest()
+        {
+            // TODO unit test for the property 'Score'
+        }
 
     }
 
