@@ -106,14 +106,6 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'ProteinConversionFactor'
         }
         /// <summary>
-        /// Test the property 'DietLabels'
-        /// </summary>
-        [Test]
-        public void DietLabelsTest()
-        {
-            // TODO unit test for the property 'DietLabels'
-        }
-        /// <summary>
         /// Test the property 'Components'
         /// </summary>
         [Test]
@@ -136,14 +128,6 @@ namespace IO.Swagger.Test
         public void CommonNameTest()
         {
             // TODO unit test for the property 'CommonName'
-        }
-        /// <summary>
-        /// Test the property 'Description'
-        /// </summary>
-        [Test]
-        public void DescriptionTest()
-        {
-            // TODO unit test for the property 'Description'
         }
         /// <summary>
         /// Test the property 'Footnote'

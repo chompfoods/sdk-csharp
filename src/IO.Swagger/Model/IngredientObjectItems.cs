@@ -37,24 +37,20 @@ namespace IO.Swagger.Model
         /// <param name="nutrients">An array containing nutrient informatio objects for this food item.</param>
         /// <param name="calorieConversionFactor">calorieConversionFactor.</param>
         /// <param name="proteinConversionFactor">The multiplication factor used to calculate protein from nitrogen.</param>
-        /// <param name="dietLabels">dietLabels.</param>
         /// <param name="components">An array of objects containing the constituent parts of a food (e.g. bone is a component of meat).</param>
         /// <param name="portions">An array of objects containing information on discrete amounts of a food found in this item.</param>
         /// <param name="commonName">Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
-        /// <param name="description">A description of this item.</param>
         /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonName = default(string), string description = default(string), string footnote = default(string))
+        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonName = default(string), string footnote = default(string))
         {
             this.Name = name;
             this.Categories = categories;
             this.Nutrients = nutrients;
             this.CalorieConversionFactor = calorieConversionFactor;
             this.ProteinConversionFactor = proteinConversionFactor;
-            this.DietLabels = dietLabels;
             this.Components = components;
             this.Portions = portions;
             this.CommonName = commonName;
-            this.Description = description;
             this.Footnote = footnote;
         }
         
@@ -92,12 +88,6 @@ namespace IO.Swagger.Model
         public decimal? ProteinConversionFactor { get; set; }
 
         /// <summary>
-        /// Gets or Sets DietLabels
-        /// </summary>
-        [DataMember(Name="diet_labels", EmitDefaultValue=false)]
-        public BrandedFoodObjectDietLabels DietLabels { get; set; }
-
-        /// <summary>
         /// An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
         /// </summary>
         /// <value>An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)</value>
@@ -119,13 +109,6 @@ namespace IO.Swagger.Model
         public string CommonName { get; set; }
 
         /// <summary>
-        /// A description of this item
-        /// </summary>
-        /// <value>A description of this item</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
         /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
         /// </summary>
         /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</value>
@@ -145,11 +128,9 @@ namespace IO.Swagger.Model
             sb.Append("  Nutrients: ").Append(Nutrients).Append("\n");
             sb.Append("  CalorieConversionFactor: ").Append(CalorieConversionFactor).Append("\n");
             sb.Append("  ProteinConversionFactor: ").Append(ProteinConversionFactor).Append("\n");
-            sb.Append("  DietLabels: ").Append(DietLabels).Append("\n");
             sb.Append("  Components: ").Append(Components).Append("\n");
             sb.Append("  Portions: ").Append(Portions).Append("\n");
             sb.Append("  CommonName: ").Append(CommonName).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Footnote: ").Append(Footnote).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -213,11 +194,6 @@ namespace IO.Swagger.Model
                     this.ProteinConversionFactor.Equals(input.ProteinConversionFactor))
                 ) && 
                 (
-                    this.DietLabels == input.DietLabels ||
-                    (this.DietLabels != null &&
-                    this.DietLabels.Equals(input.DietLabels))
-                ) && 
-                (
                     this.Components == input.Components ||
                     this.Components != null &&
                     input.Components != null &&
@@ -233,11 +209,6 @@ namespace IO.Swagger.Model
                     this.CommonName == input.CommonName ||
                     (this.CommonName != null &&
                     this.CommonName.Equals(input.CommonName))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
                 ) && 
                 (
                     this.Footnote == input.Footnote ||
@@ -265,16 +236,12 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.CalorieConversionFactor.GetHashCode();
                 if (this.ProteinConversionFactor != null)
                     hashCode = hashCode * 59 + this.ProteinConversionFactor.GetHashCode();
-                if (this.DietLabels != null)
-                    hashCode = hashCode * 59 + this.DietLabels.GetHashCode();
                 if (this.Components != null)
                     hashCode = hashCode * 59 + this.Components.GetHashCode();
                 if (this.Portions != null)
                     hashCode = hashCode * 59 + this.Portions.GetHashCode();
                 if (this.CommonName != null)
                     hashCode = hashCode * 59 + this.CommonName.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Footnote != null)
                     hashCode = hashCode * 59 + this.Footnote.GetHashCode();
                 return hashCode;
