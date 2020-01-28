@@ -40,9 +40,9 @@ namespace IO.Swagger.Model
         /// <param name="components">An array of objects containing the constituent parts of a food (e.g. bone is a component of meat).</param>
         /// <param name="portions">An array of objects containing information on discrete amounts of a food found in this item.</param>
         /// <param name="commonName">Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
-        /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        /// <param name="searchTerm">The original search term that found this food item..</param>
-        /// <param name="score">A value that represents how similar the name of this food item is to the original search term..</param>
+        /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</param>
+        /// <param name="searchTerm">The original search term that found this food item.</param>
+        /// <param name="score">A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term..</param>
         public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonName = default(string), string footnote = default(string), string searchTerm = default(string), string score = default(string))
         {
             this.Name = name;
@@ -113,23 +113,23 @@ namespace IO.Swagger.Model
         public string CommonName { get; set; }
 
         /// <summary>
-        /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+        /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
         /// </summary>
-        /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</value>
+        /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall</value>
         [DataMember(Name="footnote", EmitDefaultValue=false)]
         public string Footnote { get; set; }
 
         /// <summary>
-        /// The original search term that found this food item.
+        /// The original search term that found this food item
         /// </summary>
-        /// <value>The original search term that found this food item.</value>
+        /// <value>The original search term that found this food item</value>
         [DataMember(Name="search_term", EmitDefaultValue=false)]
         public string SearchTerm { get; set; }
 
         /// <summary>
-        /// A value that represents how similar the name of this food item is to the original search term.
+        /// A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term.
         /// </summary>
-        /// <value>A value that represents how similar the name of this food item is to the original search term.</value>
+        /// <value>A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term.</value>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public string Score { get; set; }
 
