@@ -1,7 +1,7 @@
 /* 
  * Chomp Food Database API Documentation
  *
- * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | - -- -- -- | - -- -- -- - | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -34,28 +34,28 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="name">Item name as provided by brand owner or as shown on packaging.</param>
         /// <param name="categories">categories.</param>
-        /// <param name="nutrients">nutrients.</param>
+        /// <param name="nutrients">An array containing nutrient informatio objects for this food item.</param>
         /// <param name="calorieConversionFactor">calorieConversionFactor.</param>
         /// <param name="proteinConversionFactor">The multiplication factor used to calculate protein from nitrogen.</param>
-        /// <param name="dietLabels">dietLabels.</param>
         /// <param name="components">An array of objects containing the constituent parts of a food (e.g. bone is a component of meat).</param>
         /// <param name="portions">An array of objects containing information on discrete amounts of a food found in this item.</param>
-        /// <param name="commonNames">Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
-        /// <param name="description">A description of this item.</param>
-        /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall..</param>
-        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), IngredientObjectNutrients nutrients = default(IngredientObjectNutrients), BrandedFoodObjectCalorieConversionFactor calorieConversionFactor = default(BrandedFoodObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), BrandedFoodObjectDietLabels dietLabels = default(BrandedFoodObjectDietLabels), List<BrandedFoodObjectComponents> components = default(List<BrandedFoodObjectComponents>), List<BrandedFoodObjectPortions> portions = default(List<BrandedFoodObjectPortions>), string commonNames = default(string), string description = default(string), string footnote = default(string))
+        /// <param name="commonName">Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;).</param>
+        /// <param name="footnote">Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</param>
+        /// <param name="searchTerm">The original search term that found this food item.</param>
+        /// <param name="score">A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term..</param>
+        public IngredientObjectItems(string name = default(string), List<string> categories = default(List<string>), List<IngredientObjectNutrients> nutrients = default(List<IngredientObjectNutrients>), IngredientObjectCalorieConversionFactor calorieConversionFactor = default(IngredientObjectCalorieConversionFactor), decimal? proteinConversionFactor = default(decimal?), List<IngredientObjectComponents> components = default(List<IngredientObjectComponents>), List<IngredientObjectPortions> portions = default(List<IngredientObjectPortions>), string commonName = default(string), string footnote = default(string), string searchTerm = default(string), string score = default(string))
         {
             this.Name = name;
             this.Categories = categories;
             this.Nutrients = nutrients;
             this.CalorieConversionFactor = calorieConversionFactor;
             this.ProteinConversionFactor = proteinConversionFactor;
-            this.DietLabels = dietLabels;
             this.Components = components;
             this.Portions = portions;
-            this.CommonNames = commonNames;
-            this.Description = description;
+            this.CommonName = commonName;
             this.Footnote = footnote;
+            this.SearchTerm = searchTerm;
+            this.Score = score;
         }
         
         /// <summary>
@@ -72,16 +72,17 @@ namespace IO.Swagger.Model
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// Gets or Sets Nutrients
+        /// An array containing nutrient informatio objects for this food item
         /// </summary>
+        /// <value>An array containing nutrient informatio objects for this food item</value>
         [DataMember(Name="nutrients", EmitDefaultValue=false)]
-        public IngredientObjectNutrients Nutrients { get; set; }
+        public List<IngredientObjectNutrients> Nutrients { get; set; }
 
         /// <summary>
         /// Gets or Sets CalorieConversionFactor
         /// </summary>
         [DataMember(Name="calorie_conversion_factor", EmitDefaultValue=false)]
-        public BrandedFoodObjectCalorieConversionFactor CalorieConversionFactor { get; set; }
+        public IngredientObjectCalorieConversionFactor CalorieConversionFactor { get; set; }
 
         /// <summary>
         /// The multiplication factor used to calculate protein from nitrogen
@@ -91,45 +92,46 @@ namespace IO.Swagger.Model
         public decimal? ProteinConversionFactor { get; set; }
 
         /// <summary>
-        /// Gets or Sets DietLabels
-        /// </summary>
-        [DataMember(Name="diet_labels", EmitDefaultValue=false)]
-        public BrandedFoodObjectDietLabels DietLabels { get; set; }
-
-        /// <summary>
         /// An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
         /// </summary>
         /// <value>An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)</value>
         [DataMember(Name="components", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectComponents> Components { get; set; }
+        public List<IngredientObjectComponents> Components { get; set; }
 
         /// <summary>
         /// An array of objects containing information on discrete amounts of a food found in this item
         /// </summary>
         /// <value>An array of objects containing information on discrete amounts of a food found in this item</value>
         [DataMember(Name="portions", EmitDefaultValue=false)]
-        public List<BrandedFoodObjectPortions> Portions { get; set; }
+        public List<IngredientObjectPortions> Portions { get; set; }
 
         /// <summary>
-        /// Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
+        /// Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)
         /// </summary>
-        /// <value>Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)</value>
-        [DataMember(Name="common_names", EmitDefaultValue=false)]
-        public string CommonNames { get; set; }
+        /// <value>Common name associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;)</value>
+        [DataMember(Name="common_name", EmitDefaultValue=false)]
+        public string CommonName { get; set; }
 
         /// <summary>
-        /// A description of this item
+        /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
         /// </summary>
-        /// <value>A description of this item</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-
-        /// <summary>
-        /// Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-        /// </summary>
-        /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.</value>
+        /// <value>Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall</value>
         [DataMember(Name="footnote", EmitDefaultValue=false)]
         public string Footnote { get; set; }
+
+        /// <summary>
+        /// The original search term that found this food item
+        /// </summary>
+        /// <value>The original search term that found this food item</value>
+        [DataMember(Name="search_term", EmitDefaultValue=false)]
+        public string SearchTerm { get; set; }
+
+        /// <summary>
+        /// A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term.
+        /// </summary>
+        /// <value>A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item&#x27;s name is to the original search term.</value>
+        [DataMember(Name="score", EmitDefaultValue=false)]
+        public string Score { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -144,12 +146,12 @@ namespace IO.Swagger.Model
             sb.Append("  Nutrients: ").Append(Nutrients).Append("\n");
             sb.Append("  CalorieConversionFactor: ").Append(CalorieConversionFactor).Append("\n");
             sb.Append("  ProteinConversionFactor: ").Append(ProteinConversionFactor).Append("\n");
-            sb.Append("  DietLabels: ").Append(DietLabels).Append("\n");
             sb.Append("  Components: ").Append(Components).Append("\n");
             sb.Append("  Portions: ").Append(Portions).Append("\n");
-            sb.Append("  CommonNames: ").Append(CommonNames).Append("\n");
-            sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  CommonName: ").Append(CommonName).Append("\n");
             sb.Append("  Footnote: ").Append(Footnote).Append("\n");
+            sb.Append("  SearchTerm: ").Append(SearchTerm).Append("\n");
+            sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,8 +199,9 @@ namespace IO.Swagger.Model
                 ) && 
                 (
                     this.Nutrients == input.Nutrients ||
-                    (this.Nutrients != null &&
-                    this.Nutrients.Equals(input.Nutrients))
+                    this.Nutrients != null &&
+                    input.Nutrients != null &&
+                    this.Nutrients.SequenceEqual(input.Nutrients)
                 ) && 
                 (
                     this.CalorieConversionFactor == input.CalorieConversionFactor ||
@@ -209,11 +212,6 @@ namespace IO.Swagger.Model
                     this.ProteinConversionFactor == input.ProteinConversionFactor ||
                     (this.ProteinConversionFactor != null &&
                     this.ProteinConversionFactor.Equals(input.ProteinConversionFactor))
-                ) && 
-                (
-                    this.DietLabels == input.DietLabels ||
-                    (this.DietLabels != null &&
-                    this.DietLabels.Equals(input.DietLabels))
                 ) && 
                 (
                     this.Components == input.Components ||
@@ -228,19 +226,24 @@ namespace IO.Swagger.Model
                     this.Portions.SequenceEqual(input.Portions)
                 ) && 
                 (
-                    this.CommonNames == input.CommonNames ||
-                    (this.CommonNames != null &&
-                    this.CommonNames.Equals(input.CommonNames))
-                ) && 
-                (
-                    this.Description == input.Description ||
-                    (this.Description != null &&
-                    this.Description.Equals(input.Description))
+                    this.CommonName == input.CommonName ||
+                    (this.CommonName != null &&
+                    this.CommonName.Equals(input.CommonName))
                 ) && 
                 (
                     this.Footnote == input.Footnote ||
                     (this.Footnote != null &&
                     this.Footnote.Equals(input.Footnote))
+                ) && 
+                (
+                    this.SearchTerm == input.SearchTerm ||
+                    (this.SearchTerm != null &&
+                    this.SearchTerm.Equals(input.SearchTerm))
+                ) && 
+                (
+                    this.Score == input.Score ||
+                    (this.Score != null &&
+                    this.Score.Equals(input.Score))
                 );
         }
 
@@ -263,18 +266,18 @@ namespace IO.Swagger.Model
                     hashCode = hashCode * 59 + this.CalorieConversionFactor.GetHashCode();
                 if (this.ProteinConversionFactor != null)
                     hashCode = hashCode * 59 + this.ProteinConversionFactor.GetHashCode();
-                if (this.DietLabels != null)
-                    hashCode = hashCode * 59 + this.DietLabels.GetHashCode();
                 if (this.Components != null)
                     hashCode = hashCode * 59 + this.Components.GetHashCode();
                 if (this.Portions != null)
                     hashCode = hashCode * 59 + this.Portions.GetHashCode();
-                if (this.CommonNames != null)
-                    hashCode = hashCode * 59 + this.CommonNames.GetHashCode();
-                if (this.Description != null)
-                    hashCode = hashCode * 59 + this.Description.GetHashCode();
+                if (this.CommonName != null)
+                    hashCode = hashCode * 59 + this.CommonName.GetHashCode();
                 if (this.Footnote != null)
                     hashCode = hashCode * 59 + this.Footnote.GetHashCode();
+                if (this.SearchTerm != null)
+                    hashCode = hashCode * 59 + this.SearchTerm.GetHashCode();
+                if (this.Score != null)
+                    hashCode = hashCode * 59 + this.Score.GetHashCode();
                 return hashCode;
             }
         }

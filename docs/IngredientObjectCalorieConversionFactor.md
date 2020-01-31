@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BrandedFoodObjectCalorieConversionFactor
+# IO.Swagger.Model.IngredientObjectCalorieConversionFactor
 ## Properties
 
 Name | Type | Description | Notes

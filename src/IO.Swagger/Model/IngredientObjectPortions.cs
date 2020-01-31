@@ -1,7 +1,7 @@
 /* 
  * Chomp Food Database API Documentation
  *
- * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ||| | - -- -- -- | - -- -- -- - | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | | 
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php) 
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -27,10 +27,10 @@ namespace IO.Swagger.Model
     /// An object containing information on a specific food portion found in this item
     /// </summary>
     [DataContract]
-        public partial class BrandedFoodObjectPortions :  IEquatable<BrandedFoodObjectPortions>, IValidatableObject
+        public partial class IngredientObjectPortions :  IEquatable<IngredientObjectPortions>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="BrandedFoodObjectPortions" /> class.
+        /// Initializes a new instance of the <see cref="IngredientObjectPortions" /> class.
         /// </summary>
         /// <param name="measurementUnit">The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp).</param>
         /// <param name="description">Comments that provide more specificity on the measure. For example, for a pizza measure the dissemination text might be 1 slice is 1/8th of a 14 inch pizza..</param>
@@ -38,7 +38,7 @@ namespace IO.Swagger.Model
         /// <param name="gramWeight">The weight of the measure in grams.</param>
         /// <param name="dataPoints">The number of observations on which the measure is based.</param>
         /// <param name="footnote">Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value..</param>
-        public BrandedFoodObjectPortions(string measurementUnit = default(string), string description = default(string), string modifier = default(string), decimal? gramWeight = default(decimal?), int? dataPoints = default(int?), string footnote = default(string))
+        public IngredientObjectPortions(string measurementUnit = default(string), string description = default(string), string modifier = default(string), decimal? gramWeight = default(decimal?), int? dataPoints = default(int?), string footnote = default(string))
         {
             this.MeasurementUnit = measurementUnit;
             this.Description = description;
@@ -97,7 +97,7 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class BrandedFoodObjectPortions {\n");
+            sb.Append("class IngredientObjectPortions {\n");
             sb.Append("  MeasurementUnit: ").Append(MeasurementUnit).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Modifier: ").Append(Modifier).Append("\n");
@@ -124,15 +124,15 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as BrandedFoodObjectPortions);
+            return this.Equals(input as IngredientObjectPortions);
         }
 
         /// <summary>
-        /// Returns true if BrandedFoodObjectPortions instances are equal
+        /// Returns true if IngredientObjectPortions instances are equal
         /// </summary>
-        /// <param name="input">Instance of BrandedFoodObjectPortions to be compared</param>
+        /// <param name="input">Instance of IngredientObjectPortions to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(BrandedFoodObjectPortions input)
+        public bool Equals(IngredientObjectPortions input)
         {
             if (input == null)
                 return false;

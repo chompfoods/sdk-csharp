@@ -1,4 +1,4 @@
-# IO.Swagger.Model.BrandedFoodObjectPortions
+# IO.Swagger.Model.IngredientObjectPortions
 ## Properties
 
 Name | Type | Description | Notes
